@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Nad Al Sheba Gardens: участок под жилой дом, модель девелопмента</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --navy:#051C2C; --navy2:#123C55; --teal:#00A9CE; --teal-soft:#DCEFF6;
+  --bg:#F7F9FA; --panel:#FFFFFF; --ink:#1A1F26; --muted:#6B7886; --line:#DBE2E8; --zebra:#F1F4F6;
+  --hm0:#FFFFFF; --hm1:#DCEFF6; --hm2:#A9DCEA; --hm3:#5CC3DD; --hm4:#00A9CE; --hm5:#1E5673; --neg:#E6EAEE; --cn:#123C55;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --navy:#0B2537; --navy2:#173F5C; --teal:#2FBBDB; --teal-soft:#123A4A;
+  --bg:#0E161D; --panel:#152029; --ink:#E8EEF2; --muted:#93A3B1; --line:#263542; --zebra:#1A2631;
+  --hm0:#152029; --hm1:#183A48; --hm2:#1B5468; --hm3:#1F7590; --hm4:#2FA0BF; --hm5:#5CC3DD; --neg:#1F2A34; --cn:#7FA6C2;
+}}
+:root[data-theme="dark"]{
+  --navy:#0B2537; --navy2:#173F5C; --teal:#2FBBDB; --teal-soft:#123A4A;
+  --bg:#0E161D; --panel:#152029; --ink:#E8EEF2; --muted:#93A3B1; --line:#263542; --zebra:#1A2631;
+  --hm0:#152029; --hm1:#183A48; --hm2:#1B5468; --hm3:#1F7590; --hm4:#2FA0BF; --hm5:#5CC3DD; --neg:#1F2A34; --cn:#7FA6C2;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 96px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,"Segoe UI",system-ui,sans-serif;font-size:15px;line-height:1.5}
+h1,h2,h3{font-family:Lora,Georgia,serif;font-weight:500;text-wrap:balance;margin:0}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px}
+header{background:var(--navy);color:#fff;border-bottom:3px solid var(--teal)}
+header .wrap{display:flex;justify-content:space-between;align-items:flex-end;padding:22px 24px 18px;gap:20px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:#9FB6C2}
+header h1{font-size:31px;line-height:1.1;margin-top:6px;color:#fff}
+header .sub{color:#9FB6C2;font-size:13px;margin-top:6px;max-width:80ch}
+.conf{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9FB6C2;text-align:right}
+.conf b{display:block;color:#fff;font-size:12px}
+.kbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding:12px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);padding:10px 14px;border-top:3px solid var(--teal);min-width:0}
+.kpi .l{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.kpi .v{font-family:Lora,Georgia,serif;font-size:23px;line-height:1.1;margin-top:4px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kpi .s{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.35}
+.kpi.dark{background:var(--navy);color:#fff;border-color:var(--navy)}
+.kpi.dark .l,.kpi.dark .s{color:#9FB6C2}
+.layout{display:grid;grid-template-columns:350px minmax(0,1fr);gap:28px;align-items:start;margin-top:24px}
+.ctl{position:sticky;top:calc(env(safe-area-inset-top,0px) + 108px);max-height:calc(100vh - 124px);overflow-y:auto;background:var(--panel);border:1px solid var(--line);padding:14px 16px 16px}
+.ctl h3{font-size:17px}
+.ctl .grp{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin:16px 0 4px;padding-top:10px;border-top:1px solid var(--line)}
+.ctl .grp:first-of-type{border-top:0;padding-top:0;margin-top:10px}
+.inp{padding:7px 0 3px}
+.inp label{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--ink);font-weight:600}
+.inp output{color:var(--navy2);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+:root[data-theme="dark"] .inp output{color:var(--teal)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .inp output{color:var(--teal)}}
+.inp .h{font-size:11px;color:var(--muted);line-height:1.35;margin-top:1px}
+input[type=range]{width:100%;margin:6px 0 2px;accent-color:var(--teal)}
+input[type=range]:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.seg{display:flex;margin-top:6px}
+.segb{flex:1;font:inherit;font-weight:700;font-size:11.5px;padding:8px 6px;border:1px solid var(--navy2);background:var(--panel);color:var(--ink);cursor:pointer}
+.segb:first-child{border-radius:3px 0 0 3px}.segb:last-child{border-radius:0 3px 3px 0;border-left:0}
+.segb.on{background:var(--navy2);color:#fff}
+.segb:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.off{opacity:.4}
+.btn{font:inherit;font-weight:700;font-size:13px;letter-spacing:.04em;color:#fff;background:var(--navy2);border:0;border-radius:3px;padding:9px 16px;cursor:pointer;width:100%;margin-top:14px}
+.btn:hover{background:var(--teal)}
+.btn:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+section{margin-bottom:44px}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:700}
+h2{font-size:23px;margin-top:4px;line-height:1.2}
+.lede{color:var(--muted);max-width:76ch;margin:8px 0 0}
+.lede b{color:var(--ink);font-weight:600}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:18px}.grid2>*{min-width:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:13.5px}
+th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+thead th{background:var(--navy2);color:#fff;font-weight:600;font-size:11.5px;letter-spacing:.04em;white-space:nowrap}
+tbody tr:nth-child(even) td{background:var(--zebra)}
+tr.total td{font-weight:700;border-top:2px solid var(--navy2);border-bottom:2px solid var(--navy2);background:var(--teal-soft)!important}
+tr.sub td{font-weight:700}
+td.l,th.l{text-align:left}
+td:not(:first-child):not(.l){white-space:nowrap}
+.wrapok td{white-space:normal!important}
+.wrapok thead th:first-child{white-space:normal}
+.nwnum td:not(:first-child){white-space:nowrap!important}
+.nwnum td,.nwnum th{font-size:13px;padding:7px 7px}
+.cmps td,.cmps th{font-size:12.5px;padding:7px 6px}
+#t_cmp th{white-space:normal;text-align:right;line-height:1.25}#t_cmp th:first-child{text-align:left}#t_cmp td:not(:first-child){white-space:nowrap!important}
+.layout>div{min-width:0}
+#t_cf td:first-child,#t_cf th:first-child{min-width:210px;white-space:nowrap;position:sticky;left:0;background:var(--panel)}
+#t_cf thead th:first-child{background:var(--navy2)}
+#t_cf tbody tr:nth-child(even) td:first-child{background:var(--zebra)}
+#t_cf td,#t_cf th{font-size:12.5px;padding:6px 8px}
+td.mut{color:var(--muted)}
+.panel{background:var(--panel);border:1px solid var(--line);padding:16px 18px;min-width:0}
+.panel h3{font-size:17px;margin-bottom:10px}
+.tw{overflow-x:auto}
+.hm td{text-align:center;padding:8px 2px;border:1px solid var(--line);font-size:11.5px}
+.hm th{font-size:11px!important;padding:7px 2px!important}
+.hm td:first-child,.hm th:first-child{padding-left:6px!important;padding-right:6px!important}
+.hm th{text-align:center;padding:7px 5px}
+.hm th:first-child,.hm td:first-child{text-align:left;font-weight:600;background:var(--panel)!important;white-space:nowrap}
+.hm td.base{outline:2px solid var(--navy);outline-offset:-2px;font-weight:700}
+:root[data-theme="dark"] .hm td.base{outline-color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hm td.base{outline-color:#fff}}
+.note{font-size:12px;color:var(--muted);margin-top:8px;max-width:95ch}
+.chart{width:100%;height:auto;display:block;margin-top:10px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+.fact{background:var(--panel);border:1px solid var(--line);padding:12px 14px}
+.fact .l{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.fact .v{font-family:Lora,Georgia,serif;font-size:22px;margin-top:2px}
+.fact .s{font-size:12px;color:var(--muted)}
+.verdict{border-left:4px solid var(--teal);background:var(--panel);border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 18px;margin-top:18px}
+.verdict p{margin:0;max-width:95ch}
+.verdict p+p{margin-top:8px}
+.open ol{margin:10px 0 0;padding-left:20px}
+.open li{margin-bottom:8px;max-width:90ch}
+footer{margin:24px 0 32px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+footer p{max-width:120ch;margin:0 0 8px}
+@media (max-width:1080px){.layout{grid-template-columns:minmax(0,1fr)}.ctl{position:static;max-height:none}.kpis{grid-template-columns:repeat(3,1fr);gap:6px;padding:8px 0}.kpi:nth-child(n+4){display:none}.kpi .s{display:none}.kpi{padding:7px 10px}.kpi .v{font-size:19px}.kpi .l{font-size:9.5px}}
+@media (max-width:720px){.grid2,.grid3{grid-template-columns:1fr}header h1{font-size:27px}.wrap{padding:0 16px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div>
+    <div class="brand">Palm &amp; Peak · Девелопмент с нуля</div>
+    <h1>Nad Al Sheba Gardens: участок под жилой дом</h1>
+    <div class="sub">Nad Al Sheba 1, мастер-план Meraas · участок 14&nbsp;822 кв. фута · GFA 45&nbsp;000 кв. футов по листингу · разрешено G+2P+6 · основной вариант модели: G+5 с паркингом и ритейлом на первом этаже · депозит на эскроу 30% стоимости строительства · цена продавца 25,0&nbsp;млн AED, в базовом сценарии 22,0&nbsp;млн (489 за кв. фут GFA) · базовая цена квартир 2&nbsp;200, ритейла 2&nbsp;500 AED за кв. фут · модель v2.5</div>
+  </div>
+  <div class="conf">Рабочий документ, не оферта<b>Сентябрь 2026 · AED</b></div>
+</div></header>
+
+<div class="kbar"><div class="wrap"><div class="kpis">
+  <div class="kpi dark"><div class="l">Чистая прибыль</div><div class="v" id="k_profit"></div><div class="s" id="k_profit_s"></div></div>
+  <div class="kpi dark"><div class="l">IRR на капитал</div><div class="v" id="k_irr"></div><div class="s" id="k_irr_s"></div></div>
+  <div class="kpi"><div class="l">Пиковый капитал</div><div class="v" id="k_eq"></div><div class="s" id="k_eq_s"></div></div>
+  <div class="kpi"><div class="l">Мультипликатор</div><div class="v" id="k_mult"></div><div class="s" id="k_mult_s"></div></div>
+  <div class="kpi"><div class="l">Цена безубыточности</div><div class="v" id="k_be"></div><div class="s" id="k_be_s"></div></div>
+  <div class="kpi"><div class="l">Выручка (GDV)</div><div class="v" id="k_gdv"></div><div class="s" id="k_gdv_s"></div></div>
+</div></div></div>
+
+<main class="wrap"><div class="layout">
+
+<aside class="ctl" aria-label="Вводные модели">
+  <h3>Вводные</h3>
+  <div id="controls"></div>
+  <button type="button" id="reset" class="btn">Вернуть базовый сценарий</button>
+</aside>
+
+<div>
+
+<section id="site">
+  <div class="eyebrow">Участок</div>
+  <h2>Участок под дом средней этажности внутри района вилл: 556 AED за кв. фут разрешённой площади</h2>
+  <p class="lede">Участок находится в Nad Al Sheba Gardens, мастер-плане Meraas в Nad Al Sheba 1, рядом с Meydan. Район застроен виллами и таунхаусами, под многоквартирные дома отведена узкая полоса участков G+2P+6. В районе учтено шестнадцать таких домов: три сданы, остальные строятся, все силами небольших девелоперов. <b>План: купить землю, спроектировать дом примерно на 40 квартир, продать его на стадии строительства через эскроу, построить и передать покупателям.</b></p>
+  <div class="grid3">
+    <div class="fact"><div class="l">Участок</div><div class="v">14&nbsp;822 кв. фута</div><div class="s">1&nbsp;377 кв. м · FAR 3,04 при заявленном GFA</div></div>
+    <div class="fact"><div class="l">GFA по листингу</div><div class="v">45&nbsp;000 кв. футов</div><div class="s">7&nbsp;500 на этаж при шести этажах, без балконов</div></div>
+    <div class="fact"><div class="l">Цена продавца</div><div class="v">25,0 млн AED</div><div class="s">плюс 4% DLD и 2% агенту · объявлению 28 дней на дату проверки</div></div>
+  </div>
+  <div class="verdict" id="verdict"></div>
+  <p class="note">Проверка листинга: в карточке указано 14&nbsp;822 кв. фута, в описании «около 15&nbsp;000», а в шаблонном абзаце «участок 5&nbsp;000 кв. футов». GFA, высотность, назначение, отступы, норма паркинга и право на ритейл на первом этаже ничем не подтверждены. Первые документы к запросу: affection plan и правила застройки Meraas для этого участка. Все площади в модели считаются от заявленных 45&nbsp;000 кв. футов GFA.</p>
+</section>
+
+<section id="scheme">
+  <div class="eyebrow">Схема застройки</div>
+  <h2>G+5 с паркингом на земле против G+2P+6 по листингу</h2>
+  <p class="lede">Основной вариант: первый этаж отдан под паркинг на 40 машиномест, небольшое лобби с ресепшен и технические помещения (насосная, электрощитовая, трансформаторная DEWA, мусорокамера); всё, что остаётся, уходит под коммерческое помещение на продажу. Выше пять жилых этажей по 7&nbsp;500 кв. футов GFA без балконов. Два этажа подиума не строятся: дом ниже, дешевле и быстрее. <b>Переключатель схемы слева пересчитывает всю модель.</b></p>
+  <div class="grid2">
+    <div class="panel"><h3>Баланс первого этажа</h3><div class="tw"><table id="t_ground"></table></div>
+    <p class="note" id="n_ground"></p></div>
+    <div class="panel"><h3>Три варианта при текущих вводных</h3><div class="tw"><table id="t_cmp" class="wrapok"></table></div>
+    <p class="note" id="n_cmp"></p></div>
+  </div>
+  <div class="panel" style="margin-top:20px"><h3>Ритейл на первом этаже</h3><div class="tw"><table id="t_retail" class="wrapok"></table></div>
+  <p class="note">Площадь ритейла не задаётся вручную: это остаток первого этажа. Она растёт, если сократить число машиномест или площадь на место, и исчезает, если паркинг с отступами займёт весь участок. Сделок по коммерческим помещениям в районе в открытых данных не найдено; в The Roof Residence десять коммерческих помещений, их цены стоит запросить у брокеров района.</p></div>
+</section>
+
+<section id="market">
+  <div class="eyebrow">Рынок</div>
+  <h2>Квартиры на стадии строительства регистрируются в районе по цене от 1&nbsp;700 до 2&nbsp;200 AED за кв. фут; верх диапазона забирает продукт с сильным дизайном</h2>
+  <p class="lede">Регистрации Dubai Land Department по многоквартирным домам внутри Nad Al Sheba Gardens, последние десять записей по каждому проекту. Тридцать пять сделок на стадии строительства за 2026 год дают в среднем <b>1&nbsp;890 AED за кв. фут</b>. Квартиры с одной спальней: 1&nbsp;955 при средней площади 819 кв. футов (чек 1,60 млн AED); с двумя спальнями: 1&nbsp;862 при 1&nbsp;243 кв. футах (чек 2,31 млн AED).</p>
+  <div class="panel" style="margin-top:18px"><h3>Конкурирующие проекты на участках того же типа</h3><div class="tw"><table class="cmps">
+    <thead><tr><th>Проект</th><th class="l">Девелопер</th><th>Этажей</th><th>Квартир</th><th>Смета в DLD</th><th class="l">График</th><th class="l">Сдача</th><th>DLD 2026</th><th>Средняя</th></tr></thead>
+    <tbody>
+    <tr><td>La Vue (La Vue Parc)</td><td class="l">Maaia</td><td>9</td><td>46</td><td>35,0 млн</td><td class="l">50/50</td><td class="l">2 кв. 2027</td><td>2&nbsp;018 … 2&nbsp;372</td><td><b>2&nbsp;204</b></td></tr>
+    <tr><td>Celia Gardens</td><td class="l">Abou Eid</td><td>10</td><td>45</td><td>37,3 млн</td><td class="l">10/40/20/30</td><td class="l">4 кв. 2026</td><td>1&nbsp;549 … 2&nbsp;140</td><td><b>1&nbsp;906</b></td></tr>
+    <tr><td>One by Nine</td><td class="l">Nine Developments</td><td>8</td><td>н/д</td><td>26,2 млн</td><td class="l">10/40/10/40</td><td class="l">2026</td><td>1&nbsp;625 … 2&nbsp;014*</td><td><b>1&nbsp;750</b></td></tr>
+    <tr><td>Solcasa Residence</td><td class="l">Matrix</td><td>8</td><td>н/д</td><td>34,0 млн</td><td class="l">н/д</td><td class="l">2026</td><td>1&nbsp;637 … 1&nbsp;812</td><td><b>1&nbsp;722</b></td></tr>
+    <tr><td>Ethan Residences</td><td class="l">Griffin</td><td>8</td><td>48</td><td>28,0 млн</td><td class="l">20/50/10/20</td><td class="l">2026</td><td>1&nbsp;400 … 1&nbsp;890</td><td><b>1&nbsp;696</b></td></tr>
+    <tr><td>The Roof Residence</td><td class="l">Soboh</td><td>9</td><td>68 + 10</td><td>37,7 млн</td><td class="l">20/30/20/30</td><td class="l">Сдан</td><td>1&nbsp;269 … 1&nbsp;863**</td><td><b>1&nbsp;605</b></td></tr>
+    <tr><td>Queen's Garden</td><td class="l">HMK</td><td>9</td><td>70</td><td>50,0 млн</td><td class="l">н/д</td><td class="l">4 кв. 2026</td><td class="mut">записей нет</td><td class="mut">н/д</td></tr>
+    <tr><td>Verdina Gardens</td><td class="l">Jamal Living</td><td>9</td><td>62</td><td>н/д</td><td class="l">н/д</td><td class="l">Строится</td><td class="mut">записей нет</td><td class="mut">н/д</td></tr>
+    </tbody></table></div>
+    <p class="note">График читается так: бронирование / стройка / сдача / после сдачи. Цены DLD в AED за кв. фут. В The Roof Residence 68 квартир и 10 коммерческих помещений. * Диапазон One by Nine охватывает 2025 и 2026 годы; единственная сделка 2026 года прошла по 1&nbsp;750. ** По The Roof Residence это перепродажи готовых квартир. Заявленная стоимость: смета строительства, которую девелопер подал в Land Department до начала работ; это нижняя граница, а не фактические затраты. Семь заявок дают в среднем 35 млн AED (33 млн без Queen's Garden на 70 квартир) для дома G+2P+6; по этой цифре сверена смета в модели. В четырёх из пяти известных графиков от 20 до 40% цены платится после сдачи. The Roof Residence подтверждает, что ритейл на первом этаже в районе встречается.</p>
+  </div>
+
+  <div class="panel" style="margin-top:20px"><h3>Компактные квартиры до 500 кв. футов: сделки DLD по данным Bayut</h3><div class="tw"><table class="wrapok nwnum">
+    <thead><tr><th>Сегмент, 2026 год</th><th>Сделок</th><th>Средневзв.</th><th>Медиана</th><th>Средние 50%</th><th>Площадь</th><th>Чек</th></tr></thead>
+    <tbody>
+    <tr><td>Azizi Riviera, студии, готовые</td><td>361</td><td>2&nbsp;018</td><td><b>1&nbsp;994</b></td><td>1&nbsp;817 … 2&nbsp;181</td><td>358</td><td>723 тыс.</td></tr>
+    <tr><td>Azizi Riviera, студии, на стадии строительства</td><td>139</td><td>2&nbsp;308</td><td><b>2&nbsp;286</b></td><td>2&nbsp;107 … 2&nbsp;443</td><td>452</td><td>1,04 млн</td></tr>
+    <tr><td>Azizi Riviera, 1 спальня до 500 кв. футов (все готовые)</td><td>24</td><td>2&nbsp;101</td><td><b>2&nbsp;090</b></td><td>1&nbsp;880 … 2&nbsp;262</td><td>479</td><td>1,01 млн</td></tr>
+    <tr><td>Azizi Riviera, 1 спальня от 500 до 600 кв. футов</td><td>48</td><td>2&nbsp;004</td><td>1&nbsp;920</td><td>1&nbsp;783 … 2&nbsp;224</td><td>557</td><td>1,12 млн</td></tr>
+    <tr><td>Nad Al Sheba Gardens, студии (Solcasa, 450 кв. футов), 12 месяцев</td><td>2</td><td>1&nbsp;883</td><td>1&nbsp;767 и 2&nbsp;000</td><td class="mut">н/д</td><td>450</td><td>848 тыс.</td></tr>
+    <tr><td>Nad Al Sheba Gardens, 1 спальня, 12 месяцев (до 500 кв. футов сделок нет)</td><td>57</td><td>1&nbsp;882</td><td>1&nbsp;916</td><td>1&nbsp;558 … 2&nbsp;267</td><td>828</td><td>1,56 млн</td></tr>
+    <tr><td>Mercedes-Benz Places Binghatti City, студии, 12 месяцев</td><td>1&nbsp;066</td><td>3&nbsp;616</td><td class="mut">н/д</td><td class="mut">н/д</td><td class="mut">н/д</td><td>1,37 млн</td></tr>
+    </tbody></table></div>
+    <div class="tw" style="margin-top:14px"><table class="wrapok nwnum">
+    <thead><tr><th>Фильтры Bayut: до 500 кв. футов, 12 месяцев, кто продаёт</th><th>Сделок</th><th>Средняя за кв. фут</th><th>Средний чек</th></tr></thead>
+    <tbody>
+    <tr><td>Azizi Riviera, студии: первая продажа девелопера</td><td>216</td><td><b>2&nbsp;292</b></td><td>978 тыс.</td></tr>
+    <tr><td>Azizi Riviera, студии: перепродажа</td><td>512</td><td><b>1&nbsp;957</b></td><td>683 тыс.</td></tr>
+    <tr><td>Azizi Riviera, 1 спальня: первая продажа девелопера</td><td>5</td><td>2&nbsp;538</td><td>1,23 млн</td></tr>
+    <tr><td>Azizi Riviera, 1 спальня: перепродажа</td><td>37</td><td>2&nbsp;037</td><td>971 тыс.</td></tr>
+    </tbody></table></div>
+    <div class="grid2" style="margin-top:14px">
+      <div><div class="tw"><table class="wrapok">
+        <thead><tr><th>Студии Riviera, готовые, 2026</th><th>Сделок</th><th>Медиана</th><th>Чек</th></tr></thead>
+        <tbody>
+        <tr><td>до 330 кв. футов</td><td>96</td><td>2&nbsp;082</td><td>657 тыс.</td></tr>
+        <tr><td>330 … 360</td><td>115</td><td>2&nbsp;057</td><td>710 тыс.</td></tr>
+        <tr><td>360 … 400</td><td>87</td><td>1&nbsp;847</td><td>725 тыс.</td></tr>
+        <tr><td>400 … 500</td><td>63</td><td>1&nbsp;882</td><td>846 тыс.</td></tr>
+        </tbody>
+        <thead><tr><th>Студии на стадии строительства, 2026</th><th>Сделок</th><th>Медиана</th><th>Чек</th></tr></thead>
+        <tbody>
+        <tr><td>Azizi Riviera 49</td><td>53</td><td>2&nbsp;334</td><td>1,07 млн</td></tr>
+        <tr><td>Azizi Riviera 50</td><td>29</td><td>2&nbsp;238</td><td>1,02 млн</td></tr>
+        <tr><td>Azizi Riviera 68</td><td>18</td><td>2&nbsp;087</td><td>969 тыс.</td></tr>
+        <tr><td>Azizi Riviera 66</td><td>16</td><td>2&nbsp;310</td><td>1,00 млн</td></tr>
+        <tr><td>Azizi Riviera 60</td><td>12</td><td>2&nbsp;357</td><td>998 тыс.</td></tr>
+        <tr><td>Azizi Riviera Rêve, башни 1 и 3</td><td>7</td><td>3&nbsp;081 … 3&nbsp;406</td><td>1,36 … 1,51 млн</td></tr>
+        </tbody></table></div></div>
+      <div><p class="lede" style="margin-top:0"><b>Вывод для нашей цены.</b> Девелопер продаёт студии до 500&nbsp;кв. футов в среднем по 2&nbsp;292, перепродажа идёт по 1&nbsp;957: премия нового продукта около 17%. Новые студии около 450 кв. футов в Riviera уходят по 2&nbsp;100 … 2&nbsp;350 AED за кв. фут при чеке около 1,0 млн: это и есть прямой ориентир для нового продукта. Готовые студии торгуются по медиане около 2&nbsp;000, и рынок остывает: 2&nbsp;117 в феврале, 1&nbsp;960 в июле, 1&nbsp;830 в сентябре. Для компактных квартир в нашем доме рабочий коридор: студии от 2&nbsp;150 до 2&nbsp;400 (чек 0,9 … 1,05 млн), квартиры с одной спальней до 500 кв. футов от 2&nbsp;100 до 2&nbsp;250 (чек 1,0 … 1,1 млн); в среднем около 2&nbsp;200. Binghatti продаёт студии по 3&nbsp;600 с чеком 1,37 млн и объёмом более тысячи сделок в год: это бренд и маркетинговая машина, а не наш уровень, но потолок чека для студии в этой локации он показывает.</p></div>
+    </div>
+    <p class="note">Цена вопроса при базовых вводных: цена 2&nbsp;200 AED за кв. фут уже стоит в базе, со стандартной нарезкой схема G+5 даёт маржу 24,9% и IRR 32,5%. Переключатель «Компактная» слева показывает обратную сторону: стройка жилых этажей дороже на 8% (наша оценка, больше кухонь и санузлов), маржа 22,3% и IRR 29,0%, а главное, 86 квартир при 38 машиноместах под квартиры; в подиуме G+2P+6 около 84 мест при 103 квартирах. Без решения по паркингу компактный формат на этом участке не строится. В самом Nad Al Sheba Gardens компактный формат почти не проверен: за 12 месяцев две сделки по студиям и ни одной квартиры с одной спальней до 500 кв. футов. Источник: раздел Dubai Transactions на Bayut (данные DLD после очистки Bayut, фильтры Built-up Area и Sold By), просмотрен 21 сентября 2026: Azizi Riviera, студии, 812 сделок за 12 месяцев (средняя 2&nbsp;090), квартиры с одной спальней 383 сделки (средняя 2&nbsp;118, в расчёт вошли сделки 2026 года); Nad Al Sheba Gardens, 110 сделок по квартирам (средняя 1&nbsp;826); в локации Nad Al Sheba 1 вне Gardens Bayut показывает только Sukoon by Nuri: 36 сделок, средняя 1&nbsp;889, студий нет. Перекрёстная проверка по срезу Propsearch (последние десять записей DLD на дом) даёт по готовым студиям Riviera медиану 1&nbsp;851.</p>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>Земля: аналоги</h3><div class="tw"><table class="wrapok">
+      <thead><tr><th>Участок</th><th>Кв. футов</th><th>AED</th><th>За кв. фут</th></tr></thead>
+      <tbody>
+      <tr class="sub"><td>Наш участок, G+2P+6, цена продавца</td><td>14&nbsp;822</td><td>25,0 млн</td><td>1&nbsp;686</td></tr>
+      <tr><td>G+2P+6 у парка, цена продавца (сентябрь 2026)</td><td>14&nbsp;807</td><td>30,0 млн</td><td>2&nbsp;026</td></tr>
+      <tr><td>Участок Solcasa, регистрация DLD (октябрь 2025)</td><td>17&nbsp;322</td><td>24,0 млн</td><td>1&nbsp;386</td></tr>
+      <tr><td>Продажа земли в районе, DLD (12 августа 2026), назначение не указано</td><td>11&nbsp;654</td><td>11,65 млн</td><td>1&nbsp;000</td></tr>
+      <tr><td>Участки под виллы G+1, цены продавцов</td><td>5&nbsp;003 … 10&nbsp;879</td><td>6,8 … 15,25 млн</td><td>1&nbsp;350 … 1&nbsp;850</td></tr>
+      </tbody></table></div>
+      <p class="note">Наш участок дешевле второго G+2P+6 на портале, но на 22% дороже единственной найденной регистрации участка под многоквартирный дом. Цены продавцов не доказательство; доказательство только две цифры DLD.</p>
+    </div>
+    <div class="panel"><h3>Дубай в целом, 2026</h3><div class="tw"><table class="wrapok">
+      <thead><tr><th>Показатель</th><th>Значение</th></tr></thead>
+      <tbody>
+      <tr><td>Средняя цена на старте продаж, 1 полугодие 2026</td><td>1&nbsp;972 за кв. фут (медиана 1&nbsp;725)</td></tr>
+      <tr><td>Средняя цена на старте продаж, июль 2026</td><td>1&nbsp;874 за кв. фут</td></tr>
+      <tr><td>Преобладающий график платежей</td><td>50/50</td></tr>
+      <tr><td>Доля запусков с рассрочкой после сдачи, июнь 2026</td><td>35% (в январе 10%)</td></tr>
+      <tr><td>Типичная комиссия брокерам на старте</td><td>5%</td></tr>
+      <tr><td>Квартир выведено в продажу в Meydan, 1 полугодие 2026</td><td>13&nbsp;231, больше любого другого района</td></tr>
+      <tr><td>Ориентир стоимости строительства квартир</td><td>от 400 до 880 AED за кв. фут</td></tr>
+      </tbody></table></div>
+      <p class="note">Главный рыночный риск: предложение в Meydan, который лидирует по запускам в Дубае. Сам район малоэтажный: в шести домах с опубликованным числом квартир их 339.</p>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="eyebrow">Путь проекта</div>
+  <h2>От регистрации земли до последнего дирхама из эскроу: <span id="tl_total"></span> мес.</h2>
+  <p class="lede">Все полосы двигаются вместе с вводными по срокам. Месяц 0: переоформление участка в Land Department, условно ноябрь 2026 года.</p>
+  <svg class="chart" id="gantt" viewBox="0 0 1000 330" role="img" aria-label="График проекта"></svg>
+  <div class="panel" style="margin-top:14px"><h3>Этапы и контрольные точки</h3><div class="tw"><table id="t_steps" class="wrapok"></table></div>
+  <p class="note">Правила Дубая, которые формируют денежный поток: до регистрации проекта в RERA земля должна быть полностью оплачена и оформлена на девелопера; все деньги покупателей идут на эскроу-счёт проекта и выдаются только под подтверждённый объём работ; до старта продаж девелопер вносит на эскроу депозит от стоимости строительства деньгами или банковской гарантией: в модели 30% деньгами, размер и режим депозита меняются слева; излишек недоступен девелоперу до завершения строительства; 5% поступлений остаются на эскроу ещё 12 месяцев после сдачи.</p></div>
+</section>
+
+<section id="programme">
+  <div class="eyebrow">Площади</div>
+  <h2>Состав площадей и ориентировочная квартирография</h2>
+  <div class="grid2">
+    <div class="panel"><h3>Площади</h3><div class="tw"><table id="t_area" class="wrapok"></table></div>
+      <p class="note">Продаваемая площадь включает балконы: так её регистрирует DLD. Дома на таких же участках отдают примерно от 47&nbsp;000 до 50&nbsp;000 кв. футов на 45 … 48 квартир при шести жилых этажах (по числу квартир и диапазонам площадей из их заявок). Это подтверждает базовые 100% от жилого GFA; точную цифру даст архитектор.</p></div>
+    <div class="panel"><h3>Квартирография при текущей цене</h3><div class="tw"><table id="t_mix"></table></div>
+      <p class="note" id="n_mix"></p></div>
+  </div>
+</section>
+
+<section id="appraisal">
+  <div class="eyebrow">Экономика проекта</div>
+  <h2>Бюджет, источники денег и доходность</h2>
+  <div class="grid2">
+    <div class="panel"><h3>Источники и расходы</h3><div class="tw"><table id="t_uses" class="wrapok"></table></div>
+    <p class="note">Затраты показаны без НДС: первая продажа нового жилья облагается по нулевой ставке, входящий НДС возмещается; задержка возмещения не моделируется. Продажа ритейла облагается НДС 5% сверх цены. Земля от НДС освобождена.</p></div>
+    <div class="panel"><h3>Доходность и распределение LP / GP</h3><div class="tw"><table id="t_ret" class="wrapok"></table></div>
+    <p class="note">Наша стандартная схема на капитал: 8% годовых приоритетно LP, полоса от 8 до 10% уходит GP, далее 80/20 до доходности 25% и 70/30 выше. Пороги начисляются помесячно на фактические взносы и выплаты. Вознаграждение за управление проектом входит в бюджет и повторно показано в экономике GP. Корпоративный налог 9% с прибыли свыше 375&nbsp;000 AED дан справочно; показатели в шапке до налога, как и в остальных наших моделях.</p></div>
+  </div>
+</section>
+
+<section id="cash">
+  <div class="eyebrow">Денежный поток</div>
+  <h2>Капитал заходит первым и выходит последним; середину оплачивают покупатели</h2>
+  <svg class="chart" id="chart1" viewBox="0 0 1000 300" role="img" aria-label="Взносы и выплаты капитала, остаток на эскроу"></svg>
+  <div class="legend"><span><i style="background:var(--cn)"></i>Взносы капитала</span><span><i style="background:var(--teal)"></i>Выплаты на капитал</span><span><i style="background:var(--muted);height:3px;vertical-align:4px"></i>Деньги проекта на эскроу</span></div>
+  <svg class="chart" id="chart2" viewBox="0 0 1000 280" role="img" aria-label="Накопленные поступления и затраты"></svg>
+  <div class="legend"><span><i style="background:var(--teal);height:3px;vertical-align:4px"></i>Поступления от покупателей, накопленным итогом</span><span><i style="background:var(--cn);height:3px;vertical-align:4px"></i>Затраты после покупки земли</span><span><i style="background:var(--muted);height:3px;vertical-align:4px"></i>Законтрактованные продажи</span></div>
+  <div class="panel" style="margin-top:16px"><h3>Эскроу: как движутся деньги</h3><div class="tw"><table id="t_escrow" class="wrapok"></table></div>
+  <p class="note">Деньги покупателей не попадают к девелоперу напрямую: они лежат на эскроу-счёте проекта и уходят подрядчику и на расходы проекта под подтверждение trustee. Депозит девелопера в базовом режиме расходуется на стройку первым, поэтому общий объём капитала почти не растёт, но деньги нужны раньше. Если банк держит депозит до сдачи, это отдельный замороженный капитал на весь срок стройки.</p></div>
+  <div class="panel" style="margin-top:16px"><h3>Денежный поток по кварталам, тыс. AED</h3><div class="tw"><table id="t_cf"></table></div></div>
+</section>
+
+<section id="sens">
+  <div class="eyebrow">Чувствительность</div>
+  <h2>Где живёт доходность</h2>
+  <p class="lede">Каждая таблица построена вокруг текущих вводных; рамкой выделен текущий сценарий. Чем насыщеннее цвет, тем лучше; серые ячейки: убыток или доходность ниже порога.</p>
+  <div class="grid2">
+    <div class="panel"><h3>IRR на капитал: срок стройки × срок продаж, мес.</h3><div class="tw"><table class="hm" id="s1"></table></div></div>
+    <div class="panel"><h3>IRR на капитал: подготовка до стройки × старт продаж после начала стройки, мес.</h3><div class="tw"><table class="hm" id="s2"></table></div></div>
+    <div class="panel"><h3>IRR на капитал: ставка строительства × цена продажи</h3><div class="tw"><table class="hm" id="s3"></table></div></div>
+    <div class="panel"><h3>Чистая прибыль, млн AED: цена участка × цена продажи</h3><div class="tw"><table class="hm" id="s4"></table></div></div>
+    <div class="panel"><h3>Пиковый капитал, млн AED: доля платежа при сдаче × срок продаж, мес.</h3><div class="tw"><table class="hm" id="s5"></table></div></div>
+    <div class="panel"><h3>Маржа от выручки: продаваемая площадь × цена продажи</h3><div class="tw"><table class="hm" id="s6"></table></div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>Пороговые значения при текущих вводных</h3><div class="tw"><table id="t_hurdle" class="wrapok"></table></div></div>
+    <div class="panel"><h3>Сценарии вокруг текущего</h3><div class="tw"><table id="t_scen"></table></div>
+    <p class="note">Негативный: цена на 10% ниже (от базовых 2&nbsp;200 это около 1&nbsp;980, чуть выше средней по району), стройка на 10% дороже и на 4 месяца дольше, продажи на 12 месяцев дольше. Позитивный: цена на 10% выше, продажи на 6 месяцев быстрее.</p></div>
+  </div>
+</section>
+
+<section class="open" id="open">
+  <div class="eyebrow">До оффера</div>
+  <h2>Открытые вопросы</h2>
+  <ol>
+    <li><b>Affection plan и правила Meraas.</b> Подтвердить GFA, высотность, назначение, отступы, норму паркинга, учёт балконов. Отдельно для схемы G+5: допускают ли правила открытый паркинг на земле вместо подиума, дом ниже разрешённой высоты и ритейл на первом этаже.</li>
+    <li><b>Посадка первого этажа.</b> 40 машиномест занимают около 10&nbsp;800 кв. футов из 14&nbsp;822; вместе с лобби, лестнично-лифтовыми узлами и техническими помещениями на ритейл остаётся мало, а отступы и озеленение ещё не вычтены. Нужен эскиз посадки от архитектора до любых переговоров о цене.</li>
+    <li><b>Сроки.</b> В базе 4 месяца на проект и разрешение, 15 месяцев стройки и сдача в месяц завершения работ: это жёсткий график. Если проект с согласованиями Meraas займёт 6 месяцев, а между актом готовности и передачей квартир пройдёт 2 месяца, IRR снижается с 32,5% до 27,4% при той же прибыли; ещё три месяца стройки дают 23,9%.</li>
+    <li><b>Неиспользованный GFA.</b> Пять этажей по 7&nbsp;500 кв. футов оставляют около 5&nbsp;100 кв. футов разрешённой площади. Если пятно застройки можно увеличить примерно до 8&nbsp;500 кв. футов на этаж, прибыль растёт примерно на треть; цена вопроса: паркинг, которого на земле уже не хватит.</li>
+    <li><b>Право собственности и продавец.</b> Title deed, остаток платежей Meraas и сроки начала строительства по участку, условия NOC мастер-девелопера на перепродажу и на продажи на стадии строительства.</li>
+    <li><b>Цена земли.</b> Модель считает цену участка, при которой маржа выходит на 20%; ориентир для оффера именно она, а не цена продавца. Участок Solcasa зарегистрирован по 1&nbsp;386 AED за кв. фут.</li>
+    <li><b>Цена подрядчика.</b> Два бюджетных предложения по эскизному проекту; заявки конкурентов на дом G+2P+6 лежат в диапазоне от 26 до 37 млн AED, дом без подиума должен стоить заметно дешевле.</li>
+    <li><b>Ритейл.</b> Цена 2&nbsp;500 AED за кв. фут в модели: вводная девелопера; сделок по коммерческим помещениям в районе в открытых данных не найдено. Проверить цены в The Roof Residence, ставки аренды в The Grand, формат (одно помещение или два) и норму паркинга под ритейл.</li>
+    <li><b>Стратегия продаж.</b> Повторять ли за рынком рассрочку после сдачи. Ползунок показывает цену вопроса: поступления медленнее, капитала на пике больше, последние деньги приходят через два года после сдачи.</li>
+    <li><b>Статус девелопера.</b> Лицензия, регистрация девелопера в RERA, эскроу-банк и trustee, выбор между денежным депозитом и банковской гарантией под депозит на эскроу (в модели 30% стоимости строительства). Отдельно подтвердить в RERA и эскроу-банке размер депозита и порядок его высвобождения: по мере стройки или только после сдачи. В открытых источниках встречаются и 20%, и около 30%.</li>
+    <li><b>Финансирование и налоги.</b> Кредит под землю требует согласия кредитора на регистрацию проекта и согласованного с эскроу-банком порядка погашения. При ставке 10,5% кредит имеет смысл, только если IRR проекта уверенно выше ставки. Отдельно: корпоративный налог проектной компании и сроки регистрации по НДС.</li>
+  </ol>
+</section>
+
+<footer>
+  <p><b>Метод.</b> Помесячная модель, месяц 0: переоформление земли. Земля: цена плюс 4% DLD, 2% агенту с НДС и 4&nbsp;200 AED сборов. Схема G+5: пять жилых этажей, GFA этажа задаётся ползунком; первый этаж: лобби 600, лестнично-лифтовые узлы 600, технические помещения 1&nbsp;650 кв. футов; паркинг на земле: число мест и площадь на место с проездами задаются ползунками (в базе 40 мест по 270 кв. футов), благоустройство паркинга по 150 AED за кв. фут; ритейл: остаток участка после паркинга и перечисленных помещений, строится как shell &amp; core по 65% ставки жилых этажей и продаётся по отдельной цене (в базе 2&nbsp;500 AED за кв. фут). Схема G+2P+6: жилой GFA 45&nbsp;000, подиум и службы 65% от GFA по 260 AED за кв. фут. В обеих схемах балконы 10% от жилого GFA; закрытые помещения считаются по ставке строительства жилых этажей; 2,0 млн AED на благоустройство, бассейн, лобби и шоурум; сверху резерв. Подрядчику платим по синусоидальной S-кривой: аванс 10% на старте, удержание 10%, половина возвращается при сдаче, половина через 12 месяцев после завершения. Проектировщики и технадзор 6% от стоимости строительства (55% до стройки, 45% в ходе неё); сборы властей и подключения 3% (40% при получении разрешения, 60% на отметке 60% стройки); согласования мастер-девелопера 300 тыс.; регистрация в RERA, эскроу и юристы 500 тыс.; управление проектом 4% от стройки с резервом и проектирования, равномерно до сдачи; сервисный сбор за участок 150 тыс. в год до сдачи; гарантийный резерв 1% от стройки через шесть месяцев после сдачи; 16 AED за кв. фут в год за непроданные площади после сдачи. Продажи: доля в месяц старта, затем равномерно до конца срока; ритейл продаётся тем же темпом и по тому же графику; комиссия и субсидия DLD платятся в месяц продажи; маркетинг: 35% вокруг старта, остальное равномерно. Платежи покупателя: бронь при продаже, строительная часть равномерно до месяца перед сдачей, доля при сдаче, остаток 24 месяца после сдачи. Эскроу: на старте продаж девелопер вносит деньгами депозит, по умолчанию 30% стоимости строительства с резервом, за вычетом уже выполненной доли работ; депозит либо расходуется на стройку, либо лежит на счёте до сдачи (переключатель); любой дефицит закрывает капитал; до сдачи выплат нет; 5% поступлений заморожены на 12 месяцев после сдачи; перед каждой выплатой резервируются будущие расходы. Кредит под землю (если включён): доля от цены участка в месяц 0, 1% за организацию, простые проценты накапливаются, погашение из первых свободных денег. IRR: годовая ставка по помесячным потокам капитала.</p>
+  <p><b>Источники.</b> Объявление Property Finder 135166932 (Mastermind Real Estate) и выдача по участкам Nad Al Sheba Gardens, просмотрены 21 сентября 2026. Сделки по компактным квартирам: раздел Dubai Transactions на Bayut (Azizi Riviera, Nad Al Sheba Gardens, Nad Al Sheba&nbsp;1, Mercedes-Benz Places Binghatti City), просмотрен 21 сентября 2026. Сделки Dubai Land Department по домам района, заявленная стоимость проектов, число квартир, графики платежей и сроки сдачи: страницы проектов Nad Al Sheba Gardens на Propsearch.ae, просмотрены 21 сентября 2026. REIDIN Dubai Residential Project Launch Tracker, 1 полугодие и июль 2026. Диапазоны стоимости строительства Knight Frank в пересказе Engel &amp; Völkers (декабрь 2025). Правила эскроу и регистрации: Закон № 8 от 2007 года, FAQ DLD, Al Tamimi &amp; Co. Всё, что не отмечено как источник, наши допущения, и их стоит оспаривать.</p>
+  <p>Palm &amp; Peak · подготовлено 21 сентября 2026 · суммы в AED · модель v2.5 · Иллюстративный расчёт. Не является офертой.</p>
+</footer>
+</div></div></main>
+<script>
+// NAS Gardens G+2P+6 development engine. Monthly, month 0 = land transfer.
+const FIX={plot:14822,gfa:45000,ask:25000000,floors5:5,lobby:600,cores:600,tech:1650,gradeRate:150,retailPerBay:750,retailCostK:0.65,compactK:1.08,dld:0.04,ba:0.021,admin:4200,balc:0.10,parkRatio:0.65,parkRate:260,amen:2000000,
+  adv:0.10,ret:0.10,cons:0.06,auth:0.03,noc:300000,rera:500000,dm:0.04,plotSC:150000,unsoldSC:16,dlp:0.01,escrowRet:0.05,dep:0.20,
+  phMonths:24,arr:0.01,taxRate:0.09,taxFree:375000,launchMkt:0.35};
+const BASE={scheme:'g5',plate:7500,bays:40,bayArea:270,rprice:2500,land:22000000,sell:1.00,price:2200,mix:'std',design:4,tender:2,build:15,dep:0.30,depLock:0,launch:0,sales:18,spike:0.20,ho:0,
+  rate:550,cont:0.05,com:0.05,mkt:0.02,abs:0,down:0.20,hand:0.50,ph:0,debt:0,ltv:0.60,drate:0.105};
+function irrM(cf){let lo=-0.95,hi=1.0;const f=r=>{let s=0;for(let k=0;k<cf.length;k++)s+=cf[k]/Math.pow(1+r,k);return s};
+  if(f(lo)<0)return -1; if(f(hi)>0)return Math.pow(1+hi,12)-1;
+  for(let i=0;i<120;i++){const m=(lo+hi)/2;if(f(m)>0)lo=m;else hi=m}return Math.pow(1+(lo+hi)/2,12)-1}
+function engine(I,opt){opt=opt||{};const F=FIX,tax=!!opt.tax;
+  const CS=I.design+I.tender,C=I.build,CE=CS+C,H=CE+I.ho,L=CS+I.launch,S=Math.max(1,I.sales);
+  const g5=I.scheme==='g5';
+  const fixedG=F.lobby+F.cores+F.tech,parkNeed=g5?I.bays*I.bayArea:0,parkFit=g5?F.plot-fixedG-parkNeed:0;
+  const resGFA=g5?F.floors5*I.plate:F.gfa,retail=g5?Math.max(0,parkFit):0,groundEncl=g5?fixedG+retail:0;
+  const gfaUsed=g5?resGFA+F.lobby+F.cores+retail:F.gfa;
+  const sellRes=resGFA*I.sell,gdvRes=sellRes*I.price,gdvRet=retail*I.rprice,sellable=sellRes+retail,gdv=gdvRes+gdvRet;
+  const resBUA=resGFA*(1+F.balc),parkBUA=g5?0:F.gfa*F.parkRatio,groundBUA=g5?Math.max(I.plate,groundEncl):0,gradeArea=g5?F.plot-groundEncl:0;
+  const bua=resBUA+parkBUA+groundBUA;
+  const hcRetail=retail*I.rate*F.retailCostK,hcRes=resBUA*I.rate*(I.mix==='compact'?F.compactK:1),hcGround=g5?fixedG*I.rate+hcRetail:0,hcPark=g5?gradeArea*F.gradeRate:parkBUA*F.parkRate;
+  const hc=hcRes+hcGround+hcPark+F.amen,cont=hc*I.cont,hcc=hc+cont;
+
+  const down=I.down,ph=Math.min(I.ph,1-down),hand=Math.min(I.hand,1-down-ph),cstr=1-down-ph-hand;
+  const lastSale=L+S-1,T=Math.max(H+12,CE+12,H+9,Math.max(lastSale,H)+F.phMonths)+1;
+  const z=()=>new Array(T+1).fill(0);
+  const rec=z(),cLand=z(),cHard=z(),cSoft=z(),cSales=z(),cOther=z(),sold=z(),prog=z();
+  // sales cohorts
+  const sh=z();if(S===1)sh[L]=1;else{sh[L]=I.spike;for(let m=L+1;m<=lastSale;m++)sh[m]=(1-I.spike)/(S-1)}
+  for(let m=L;m<=lastSale;m++){const V=gdv*sh[m];sold[m]=V;
+    if(m>=H){rec[m]+=V*(down+cstr+hand)}else{rec[m]+=V*down;rec[H]+=V*hand;const n=H-1-m;
+      if(n>0){for(let k=m+1;k<=H-1;k++)rec[k]+=V*cstr/n}else rec[H]+=V*cstr}
+    const s0=Math.max(m,H);for(let k=1;k<=F.phMonths;k++)rec[s0+k]+=V*ph/F.phMonths;
+    cSales[m]+=V*(I.com+I.abs)}
+  // marketing
+  const mk=gdv*I.mkt;cSales[Math.max(0,L-1)]+=mk*0.20;cSales[L]+=mk*0.15;for(let m=L;m<=lastSale;m++)cSales[m]+=mk*(1-F.launchMkt)/S;
+  // land
+  const acq=I.land*(1+F.dld+F.ba)+F.admin;cLand[0]+=acq;
+  // construction S-curve, advance, retention
+  const sc=k=>(1-Math.cos(Math.PI*Math.min(Math.max(k,0),C)/C))/2;
+  cHard[CS]+=hcc*F.adv;for(let k=1;k<=C;k++){const d=sc(k)-sc(k-1);cHard[CS+k]+=hcc*d*(1-F.adv-F.ret);}
+  cHard[H]+=hcc*F.ret/2;cHard[CE+12]+=hcc*F.ret/2;
+  for(let m=0;m<=T;m++)prog[m]=sc(m-CS);
+  // soft costs
+  const consF=hc*F.cons,authF=hc*F.auth,dmF=(hcc+consF)*F.dm;
+  for(let m=1;m<=CS;m++)cSoft[m]+=consF*0.55/CS;for(let k=1;k<=C;k++)cSoft[CS+k]+=consF*0.45/C;
+  cSoft[I.design]+=authF*0.40+F.noc;cSoft[CS+Math.round(C*0.6)]+=authF*0.60;cSoft[Math.max(0,L-1)]+=F.rera;
+  for(let m=1;m<=H;m++){cSoft[m]+=dmF/H;cOther[m]+=F.plotSC/12}
+  const dlp=hc*F.dlp;cOther[H+6]+=dlp;
+  // unsold inventory service charge after handover
+  let cumSh=0;const cumShare=z();for(let m=0;m<=T;m++){cumSh+=sh[m]||0;cumShare[m]=Math.min(1,cumSh)}
+  for(let m=H+1;m<=T;m++)cOther[m]+=(1-cumShare[m-1])*sellable*F.unsoldSC/12;
+  // debt
+  const loan=I.debt?I.land*I.ltv:0,arrFee=loan*F.arr;
+  const cost=z();let totCost=0;for(let m=0;m<=T;m++){cost[m]=cLand[m]+cHard[m]+cSoft[m]+cSales[m]+cOther[m];totCost+=cost[m]}
+  const preTaxBeforeInt=gdv-totCost;
+  // cash loop
+  const eq=z(),dist=z(),cashA=z(),debtBal=z();let cash=0,prin=loan,accr=0,intPaid=0,cumRec=0,cumHard=0,taxDue=0,taxPaid=0;
+  const futureCost=z();{let s=0;for(let m=T;m>=0;m--){futureCost[m]=s;s+=cost[m]-cSales[m]+( (m>=L&&m<=lastSale)?mk*(1-F.launchMkt)/S:0)}}
+  // futureCost[m] = non-sales-linked costs scheduled strictly after m (incl. remaining marketing tail)
+  let taxCalc=0,depositAmt=0;
+  for(let m=0;m<=T;m++){
+    if(m===0&&loan>0){cash+=loan-arrFee}
+    cumRec+=rec[m];cumHard+=cHard[m];cash+=rec[m]-cost[m];
+    if(prin>0&&m>0)accr+=prin*I.drate/12;
+    if(tax&&m===H+9){taxCalc=Math.max(0,(preTaxBeforeInt-arrFee-(intPaid+accr))-F.taxFree)*F.taxRate;cash-=taxCalc;taxPaid=taxCalc}
+    if(m<H){if(m===L&&prog[m]<I.dep){const dpt=Math.max(0,(I.dep-prog[m])*hcc);eq[m]+=dpt;cash+=dpt;depositAmt=dpt}
+      const floor=I.depLock?depositAmt:0;
+      if(cash<floor){eq[m]+=floor-cash;cash=floor}}
+    else{const lock=(m<H+12)?F.escrowRet*cumRec:0;
+      if(prin+accr>0){const av=Math.max(0,cash-lock);const pi=Math.min(av,accr);accr-=pi;intPaid+=pi;const pp=Math.min(av-pi,prin);prin-=pp;cash-=pi+pp}
+      let reserve=futureCost[m];if(tax&&m<H+9)reserve+=Math.max(0,(preTaxBeforeInt-arrFee-intPaid-accr)-F.taxFree)*F.taxRate;
+      if(m===T)reserve=0;
+      const d=cash-((m===T)?0:lock)-reserve;
+      if(d>0){dist[m]=d;cash-=d}else if(cash<0){eq[m]=-cash;cash=0}}
+    cashA[m]=cash;debtBal[m]=prin+accr}
+  const cf=eq.map((e,i)=>dist[i]-e);const totEq=eq.reduce((a,b)=>a+b,0),totDist=dist.reduce((a,b)=>a+b,0);
+  const profit=totDist-totEq,irr=irrM(cf);
+  // peak equity outstanding
+  let out=0,peak=0,payback=null;for(let m=0;m<=T;m++){out+=eq[m]-dist[m];if(out>peak)peak=out;if(payback===null&&out<=0&&m>0&&totEq>0&&dist[m]>0)payback=m}
+  // waterfall 8% pref, 8-10% GP band, 80/20 to 25%, 70/30 above (project-level hurdle balances, monthly compounding)
+  const rs=[0.08,0.10,0.25].map(r=>Math.pow(1+r,1/12)-1);let B=[0,0,0];const lpcf=z();let t1=0,t2=0,t3=0,t4=0;
+  for(let m=0;m<=T;m++){B=B.map((b,i)=>b*(1+rs[i])+eq[m]);let D=dist[m];lpcf[m]=-eq[m];
+    if(D>0){const a1=Math.min(D,B[0]);const a2=Math.min(D-a1,Math.max(B[1]-a1,0));const a3=Math.min(D-a1-a2,Math.max(B[2]-a1-a2,0));const a4=D-a1-a2-a3;
+      t1+=a1;t2+=a2;t3+=a3;t4+=a4;lpcf[m]+=a1+0.8*a3+0.7*a4;B=B.map(b=>Math.max(0,b-D))}}
+  const promote=Math.min(Math.max(profit,0),t2+0.2*t3+0.3*t4),lpProfit=profit-promote,lpIrr=irrM(lpcf);
+  const sum=a=>a.reduce((x,y)=>x+y,0);
+  return {hcRetail,fixedG,g5,resGFA,retail,groundEncl,gfaUsed,sellRes,gdvRes,gdvRet,groundBUA,gradeArea,hcRes,hcGround,hcPark,parkNeed,parkFit,CS,CE,H,L,lastSale,T,sellable,gdv,resBUA,parkBUA,bua,hc,cont,hcc,acq,consF,authF,dmF,mk,dlp,
+    com:gdv*I.com,absC:gdv*I.abs,plotSCt:F.plotSC*H/12,unsoldSCt:sum(cOther)-F.plotSC*H/12-dlp,
+    totCost,loan,arrFee,interest:intPaid,tax:taxPaid,profit,irr,totEq,totDist,peak,mult:totEq>0?totDist/totEq:0,payback,
+    margin:profit/gdv,poc:profit/(totCost+intPaid+arrFee+taxPaid),plan:[down,cstr,hand,ph],
+    rec,cost,cLand,cHard,cSoft,cSales,cOther,eq,dist,cashA,debtBal,prog,sold,cf,
+    t1,t2,t3,t4,promote,lpProfit,lpIrr,lpMult:totEq>0?(totEq+lpProfit)/totEq:0,landPctGdv:I.land/gdv,
+    deposit:depositAmt,recAtH:(()=>{let s=0;for(let m=0;m<=H;m++)s+=rec[m];return s})(),soldAtH:(()=>{let s=0;for(let m=0;m<=Math.min(H,T);m++)s+=sold[m];return s})()};
+}
+function solve(I,key,lo,hi,target,metric,opt){ // bisection: metric increasing or decreasing in key handled by sign test
+  const f=v=>{const J=Object.assign({},I);J[key]=v;return metric(engine(J,opt))-target};
+  let a=lo,b=hi,fa=f(a),fb=f(b);if(fa*fb>0)return null;
+  for(let i=0;i<50;i++){const m=(a+b)/2,fm=f(m);if(fa*fm<=0){b=m;fb=fm}else{a=m;fa=fm}}return (a+b)/2}
+if(typeof module!=='undefined')module.exports={engine,BASE,FIX,solve,irrM};
+
+</script>
+<script>
+const $=id=>document.getElementById(id);
+const nf=(n,d)=>Math.abs(n).toLocaleString('ru-RU',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
+const A=n=>n<0?'('+nf(n)+')':nf(n);
+const M=(n,d)=>{const s=nf(n/1e6,d===undefined?1:d)+' млн';return n<0?'('+s+')':s};
+const Mc=(n)=>{const s=nf(n/1e6,1);return n<0?'('+s+')':s};
+const P=(n,d)=>(n<0?'-':'')+nf(n*100,d===undefined?1:d)+'%';
+const K=n=>{const v=Math.round(n/1000);return v===0?'-':(v<0?'('+nf(v)+')':nf(v))};
+const X=n=>nf(n,2)+'x';
+const MON=['янв','фев','мар','апр','май','июн','июл','авг','сен','окт','ноя','дек'];
+const cal=m=>{const k=10+m;return MON[k%12]+' '+String(2026+Math.floor(k/12)).slice(2)};
+const SQ=' за кв. фут';
+let I=Object.assign({},BASE);const buildBy={g5:15,g2p6:20};
+const CTRL=[
+ {g:'Схема застройки'},
+ {seg:'scheme'},
+ {k:'plate',l:'GFA жилого этажа',min:7000,max:8500,step:50,f:v=>A(v)+' кв. ф.',h:r=>'5 этажей: '+A(r.resGFA)+' · занято GFA '+A(r.gfaUsed)+' из '+A(FIX.gfa)+(r.gfaUsed>FIX.gfa?' · превышение':''),s:'g5'},
+ {k:'bays',l:'Машиномест на первом этаже',min:30,max:50,step:1,f:v=>v+' мест',h:r=>'под паркинг '+A(r.parkNeed)+' кв. ф. · нужно под квартиры и ритейл: '+(units(r,'g5')+Math.ceil(r.retail/FIX.retailPerBay)),s:'g5'},
+ {k:'bayArea',l:'Площадь на место с проездами',min:230,max:300,step:5,f:v=>A(v)+' кв. ф.',h:r=>r.parkFit>=0?'остаток первого этажа под ритейл: '+A(r.retail)+' кв. ф.':'первый этаж не сходится: не хватает '+A(-r.parkFit)+' кв. ф., ритейла нет',s:'g5'},
+ {k:'rprice',l:'Цена продажи ритейла',min:1500,max:4500,step:50,f:v=>A(v)+SQ,h:r=>'выручка '+M(r.gdvRet,2)+' · '+P(r.gdvRet/r.gdv)+' GDV · сделок по коммерции в районе нет',s:'g5'},
+ {g:'Земля и площади'},
+ {k:'land',l:'Цена участка',min:15e6,max:30e6,step:250000,f:v=>M(v,2),h:r=>A(I.land/FIX.gfa)+' за кв. фут GFA · '+P(r.landPctGdv)+' выручки'+(I.land<FIX.ask?' · на '+P(1-I.land/FIX.ask)+' ниже запроса':I.land>FIX.ask?' · выше запроса':' · цена продавца')},
+ {k:'sell',l:'Продаваемая площадь, % жилого GFA',min:0.85,max:1.15,step:0.01,f:v=>P(v,0),h:r=>A(r.sellRes)+' кв. футов с балконами'},
+ {g:'Выручка'},
+ {k:'price',l:'Средняя цена квартир',min:1500,max:3000,step:25,f:v=>A(v)+SQ,h:r=>'район, DLD 2026: 1 890 · La Vue 2 204 · новые студии Riviera: 2 286'},
+ {seg:'mix'},
+ {g:'Сроки, месяцев'},
+ {k:'design',l:'Проект, согласования, разрешение',min:3,max:12,step:1,f:v=>v+' мес.',h:r=>'разрешение на стройку: '+cal(I.design)},
+ {k:'tender',l:'Тендер, договор, мобилизация',min:1,max:6,step:1,f:v=>v+' мес.',h:r=>'начало стройки: '+cal(r.CS)},
+ {k:'build',l:'Строительство',min:12,max:32,step:1,f:v=>v+' мес.',h:r=>'завершение работ: '+cal(r.CE)},
+ {k:'ho',l:'От акта готовности до сдачи',min:0,max:6,step:1,f:v=>v+' мес.',h:r=>'сдача: '+cal(r.H)+' · месяц '+r.H},
+ {k:'launch',l:'Старт продаж после начала стройки',min:0,max:12,step:1,f:v=>'+'+v+' мес.',h:r=>'старт: '+cal(r.L)+(r.deposit>0?' · депозит на эскроу '+M(r.deposit):' · готовность выше порога, депозит не нужен')},
+ {k:'sales',l:'Срок продаж до полной реализации',min:3,max:42,step:1,f:v=>v+' мес.',h:r=>'всё продано: '+cal(r.lastSale)+' · к сдаче продано '+P(r.soldAtH/r.gdv,0)},
+ {k:'spike',l:'Продано в месяц старта',min:0,max:0.5,step:0.05,f:v=>P(v,0),h:r=>'далее по '+P((1-I.spike)/Math.max(1,I.sales-1))+' объёма в месяц'},
+ {g:'Затраты'},
+ {k:'rate',l:'Строительство, жилые этажи',min:400,max:900,step:10,f:v=>A(v)+SQ,h:r=>'смета '+M(r.hc)+' · '+A(r.hc/r.bua)+' на кв. фут BUA · '+A(r.hc/r.sellable)+' на продаваемый'},
+ {k:'cont',l:'Резерв на непредвиденное',min:0,max:0.15,step:0.005,f:v=>P(v),h:r=>A(r.cont)+' AED'},
+ {k:'com',l:'Комиссия брокерам',min:0.03,max:0.08,step:0.005,f:v=>P(v),h:r=>A(r.com)+' AED со всех продаж'},
+ {k:'mkt',l:'Маркетинг, % выручки',min:0.01,max:0.04,step:0.0025,f:v=>P(v,2),h:r=>A(r.mk)+' AED, включая офис продаж и запуск'},
+ {k:'abs',l:'Сбор DLD за счёт девелопера',min:0,max:0.04,step:0.005,f:v=>P(v),h:r=>I.abs>0?'стоимость акции '+A(r.absC)+' AED':'покупатели платят 4% сами'},
+ {g:'Эскроу'},
+ {k:'dep',l:'Депозит девелопера, % стройки',min:0.10,max:0.50,step:0.05,f:v=>P(v,0),h:r=>r.deposit>0?'на старте продаж '+M(r.deposit,2)+' AED · '+P(r.deposit/r.peak,0)+' пикового капитала':'старт продаж после готовности '+P(I.dep,0)+', депозит не нужен'},
+ {seg:'lock'},
+ {g:'График платежей покупателя'},
+ {k:'down',l:'При бронировании',min:0.10,max:0.30,step:0.05,f:v=>P(v,0),h:r=>'график '+r.plan.map(x=>Math.round(x*100)).join(' / ')+' (бронь / стройка / сдача / после)'},
+ {k:'hand',l:'При сдаче',min:0.20,max:0.70,step:0.05,f:v=>P(v,0),h:r=>'к сдаче собрано '+P(r.recAtH/r.gdv,0)+' выручки'},
+ {k:'ph',l:'После сдачи, 24 месяца',min:0,max:0.40,step:0.05,f:v=>P(v,0),h:r=>I.ph>0?'последний платёж: '+cal(Math.max(r.lastSale,r.H)+24):'в базовом сценарии нет'},
+ {g:'Финансирование'},
+ {seg:'debt'},
+ {k:'ltv',l:'Кредит под землю, % цены участка',min:0.30,max:0.70,step:0.05,f:v=>P(v,0),h:r=>I.debt?'кредит '+M(r.loan,2):'выключен',d:1},
+ {k:'drate',l:'Ставка, простые проценты, в конце',min:0.08,max:0.13,step:0.005,f:v=>P(v),h:r=>I.debt?'проценты '+A(r.interest)+' + 1% за организацию':'выключен',d:1},
+];
+function buildControls(){let h='';CTRL.forEach(c=>{
+  if(c.g)h+=`<div class="grp">${c.g}</div>`;
+  else if(c.seg==='scheme')h+=`<div class="seg" role="radiogroup" aria-label="Схема"><button type="button" class="segb" id="sc_g5">G+5, паркинг на земле</button><button type="button" class="segb" id="sc_g2p6">G+2P+6, подиум</button></div>`;
+  else if(c.seg==='mix')h+=`<div class="seg" role="radiogroup" aria-label="Нарезка"><button type="button" class="segb" id="mx0">1 и 2 спальни</button><button type="button" class="segb" id="mx1">Компактная, до 500 кв. ф.</button></div><div class="h" id="h_mix" style="font-size:11px;color:var(--muted);line-height:1.35;margin-top:4px"></div>`;
+  else if(c.seg==='lock')h+=`<div class="seg" role="radiogroup" aria-label="Депозит"><button type="button" class="segb" id="dl0">Депозит идёт в стройку</button><button type="button" class="segb" id="dl1">Заморожен до сдачи</button></div>`;
+  else if(c.seg==='debt')h+=`<div class="seg" role="radiogroup" aria-label="Финансирование"><button type="button" class="segb" id="fs0">Только капитал</button><button type="button" class="segb" id="fs1">Кредит под землю</button></div>`;
+  else h+=`<div class="inp${c.d?' dbt':''}${c.s?' g5only':''}" id="w_${c.k}"><label for="i_${c.k}">${c.l} <output id="o_${c.k}"></output></label><input type="range" id="i_${c.k}" min="${c.min}" max="${c.max}" step="${c.step}" value="${I[c.k]}"><div class="h" id="h_${c.k}"></div></div>`});
+  $('controls').innerHTML=h;
+  CTRL.forEach(c=>{if(c.k)$('i_'+c.k).addEventListener('input',e=>{I[c.k]=+e.target.value;if(c.k==='build')buildBy[I.scheme]=I.build;render()})});
+  const setScheme=s=>{I.scheme=s;I.build=buildBy[s];$('i_build').value=I.build;render()};
+  $('sc_g5').addEventListener('click',()=>setScheme('g5'));$('sc_g2p6').addEventListener('click',()=>setScheme('g2p6'));
+  $('mx0').addEventListener('click',()=>{I.mix='std';render()});$('mx1').addEventListener('click',()=>{I.mix='compact';render()});
+  $('dl0').addEventListener('click',()=>{I.depLock=0;render()});$('dl1').addEventListener('click',()=>{I.depLock=1;render()});
+  $('fs0').addEventListener('click',()=>{I.debt=0;render()});$('fs1').addEventListener('click',()=>{I.debt=1;render()});
+  $('reset').addEventListener('click',()=>{I=Object.assign({},BASE);buildBy.g5=15;buildBy.g2p6=20;CTRL.forEach(c=>{if(c.k)$('i_'+c.k).value=I[c.k]});render()});
+}
+function heatCls(v,vals,floor,invert){const ok=vals.filter(x=>invert?true:x>=floor);if(!invert&&v<floor)return -1;
+  const mn=Math.min(...ok),mx=Math.max(...ok);let t=mx===mn?0.5:(v-mn)/(mx-mn);if(invert)t=1-t;return Math.min(5,Math.floor(t*5.999))}
+function hm(el,corner,rows,cols,fn,fmt,rf,cf,br,bc,floor,invert){
+  const grid=rows.map(r=>cols.map(c=>fn(r,c)));const vals=[].concat(...grid);
+  let h=`<thead><tr><th>${corner}</th>${cols.map(c=>`<th>${cf(c)}</th>`).join('')}</tr></thead><tbody>`;
+  rows.forEach((r,i)=>{h+=`<tr><td>${rf(r)}</td>`;cols.forEach((c,j)=>{const v=grid[i][j],k=heatCls(v,vals,floor,invert);
+    const bg=k<0?'var(--neg)':`var(--hm${k})`,col=k<0?'var(--muted)':(k>=4?'#fff':'var(--ink)');
+    h+=`<td class="${i===br&&j===bc?'base':''}" style="background:${bg};color:${col}">${fmt(v)}</td>`});h+='</tr>'});
+  el.innerHTML=h+'</tbody>'}
+function around(v,offs,min,max){const out=[];offs.forEach(o=>{const x=Math.round((v+o)*1e6)/1e6;if(x>=min-1e-9&&x<=max+1e-9&&!out.includes(x))out.push(x)});return out}
+const run=(o,opt)=>engine(Object.assign({},I,o),opt);
+const MIXES={std:{g5:[['1 спальня',0.50,800,1.03],['2 спальни',0.50,1250,0.97]],g2p6:[['1 спальня',0.45,820,1.04],['2 спальни',0.45,1250,0.98],['3 спальни',0.10,2000,0.90]]},compact:{g5:[['Студия',0.50,400,1.03],['1 спальня',0.50,480,0.97]],g2p6:[['Студия',0.50,400,1.03],['1 спальня',0.50,480,0.97]]}};
+const mixOf=sch=>MIXES[I.mix||'std'][sch];
+function units(r,sch){let u=0;mixOf(sch).forEach(x=>u+=Math.round(r.sellRes*x[1]/x[2]));return u}
+function render(){
+  const r=engine(I),rt=engine(I,{tax:true}),ru=I.debt?run({debt:0}):r,g5=r.g5;
+  CTRL.forEach(c=>{if(c.k){$('o_'+c.k).textContent=c.f(I[c.k]);$('h_'+c.k).textContent=c.h(r)}});
+  document.querySelectorAll('.dbt').forEach(e=>e.classList.toggle('off',!I.debt));
+  document.querySelectorAll('.g5only').forEach(e=>{e.classList.toggle('off',!g5);e.querySelector('input').disabled=!g5});
+  $('mx0').classList.toggle('on',I.mix!=='compact');$('mx1').classList.toggle('on',I.mix==='compact');{const un=units(r,I.scheme),cap=g5?I.bays-Math.ceil(r.retail/FIX.retailPerBay):Math.round(r.parkBUA/350);$('h_mix').textContent=un+' квартир, средняя площадь '+A(r.sellRes/un)+' кв. ф. · мест под квартиры '+cap+(un>cap?': не хватает '+(un-cap):': хватает')+(I.mix==='compact'?' · стройка жилых этажей +8%':'');}
+  $('dl0').classList.toggle('on',!I.depLock);$('dl1').classList.toggle('on',!!I.depLock);
+  $('fs0').classList.toggle('on',!I.debt);$('fs1').classList.toggle('on',!!I.debt);
+  $('sc_g5').classList.toggle('on',g5);$('sc_g2p6').classList.toggle('on',!g5);
+  const be=solve(I,'price',500,6000,0,x=>x.profit),tc=r.totCost+r.interest+r.arrFee;
+  $('k_profit').textContent=M(r.profit,2);$('k_profit_s').textContent=P(r.margin)+' от выручки · '+P(r.poc)+' на затраты'+(I.debt?' · после '+M(r.interest+r.arrFee,2)+' расходов по кредиту':'');
+  $('k_irr').textContent=r.irr<=-0.99?'н/д':P(r.irr);$('k_irr_s').textContent='до налога, по помесячным потокам · '+P(rt.irr)+' после налога 9%'+(I.debt?' · '+P(ru.irr)+' без кредита':'');
+  $('k_eq').textContent=M(r.peak,2);$('k_eq_s').textContent='земля и сборы '+M(r.acq-(r.loan-r.arrFee),1)+' в месяц 0'+(I.debt?' за вычетом кредита '+M(r.loan,1):'')+' · '+P(r.peak/tc,0)+' всех затрат';
+  $('k_mult').textContent=X(r.mult);$('k_mult_s').textContent='первые деньги назад: '+cal(r.H)+', месяц '+r.H+' · всё возвращено к месяцу '+r.T;
+  $('k_be').textContent=be?A(be):'н/д';$('k_be_s').textContent=be?'AED за кв. фут квартир · запас '+P(I.price/be-1)+' к текущей цене · средняя DLD 1 890':'';
+  $('k_gdv').textContent=M(r.gdv,1);$('k_gdv_s').textContent=A(r.sellRes)+' кв. ф. по '+A(I.price)+(r.retail>0?' + ритейл '+M(r.gdvRet,1):'')+' · затраты '+A(tc/r.sellable)+SQ;
+  // verdict
+  const land20=solve(I,'land',1e6,6e7,0.20,x=>x.margin),p20=solve(I,'price',500,6000,0.20,x=>x.margin);
+  const tone=r.margin>=0.20?'Проект даёт маржу выше 20% от выручки: это нижняя планка для девелопера, который берёт на себя риск продаж и стройки.':(r.margin>=0.10?'Проект прибыльный, но маржа ниже 20% от выручки, которые обычно нужны девелоперу за риск продаж и стройки.':'Проект на грани: маржа не окупает риск продаж и стройки.');
+  $('verdict').innerHTML=`<p><b>Что показывает модель при текущих вводных.</b> ${tone} Земля за ${M(I.land,2)} AED составляет ${P(r.landPctGdv)} выручки (${P(r.acq/r.gdv)} с расходами на сделку) при ориентире для девелопера от 20 до 25%.</p><p>К марже 20% при прочих равных ведут два пути: участок за <b>${land20?M(land20,1)+' AED':'н/д'}</b>${land20?' ('+A(land20/FIX.gfa)+' за кв. фут GFA, на '+P(1-land20/FIX.ask,0)+' ниже цены продавца)':''} или средняя цена квартир <b>${p20?A(p20)+' AED за кв. фут':'н/д'}</b>${p20?' (на '+P(p20/1890-1,0)+' выше средней по району, '+(p20<=2204?'в пределах диапазона La Vue':'выше La Vue')+')':''}.</p>`;
+  // scheme section
+  const retailBays=Math.ceil(r.retail/FIX.retailPerBay),un=units(r,I.scheme);
+  if(g5){$('t_ground').innerHTML=`<thead><tr><th>Первый этаж и участок</th><th>Кв. футов</th><th class="l">Основание</th></tr></thead><tbody>
+  <tr><td>Участок</td><td>${A(FIX.plot)}</td><td class="l">листинг</td></tr>
+  <tr><td>Лобби с ресепшен</td><td>${A(FIX.lobby)}</td><td class="l">допущение</td></tr>
+  <tr><td>Лестницы и лифты</td><td>${A(FIX.cores)}</td><td class="l">допущение</td></tr>
+  <tr><td>Насосная, электрощитовая, трансформаторная, мусорокамера</td><td>${A(FIX.tech)}</td><td class="l">допущение</td></tr>
+  <tr><td>Паркинг, ${I.bays} мест по ${A(I.bayArea)} кв. футов</td><td>${A(r.parkNeed)}</td><td class="l">место 2,5 × 5,5 м и проезд 6 м</td></tr>
+  <tr class="total"><td>${r.parkFit>=0?'Остаток: ритейл на продажу':'Не хватает площади участка'}</td><td>${A(r.parkFit)}</td><td class="l">${P(Math.abs(r.parkFit)/FIX.plot)} участка</td></tr>
+  <tr><td>Потребность: квартиры + ритейл</td><td>${un} + ${retailBays}</td><td class="l">${un+retailBays>I.bays?'больше '+I.bays+' мест: не хватает '+(un+retailBays-I.bays):'укладывается в '+I.bays+' мест'}</td></tr></tbody>`;
+  $('n_ground').textContent='Ритейл считается как остаток участка после паркинга, лобби, лестнично-лифтовых узлов и технических помещений. Расчёт без отступов и озеленения, то есть в пользу схемы: реальный остаток будет меньше. '+(r.parkFit<0?'Сейчас первый этаж не сходится: нужно сократить паркинг, ужать место или увести часть мест под землю. ':'')+'Норма паркинга принята как одно место на квартиру до двух спален и одно место на 750 кв. футов ритейла; её нужно подтвердить. До эскиза посадки от архитектора эту схему стоит считать гипотезой.';}
+  else{$('t_ground').innerHTML=`<thead><tr><th>Подиум</th><th>Кв. футов</th><th class="l">Основание</th></tr></thead><tbody>
+  <tr><td>Участок</td><td>${A(FIX.plot)}</td><td class="l">листинг</td></tr>
+  <tr><td>Первый этаж и два уровня паркинга</td><td>${A(r.parkBUA)}</td><td class="l">65% от GFA, около ${Math.round(r.parkBUA/350)} мест</td></tr>
+  <tr><td>Шесть жилых этажей</td><td>${A(r.resGFA)}</td><td class="l">по 7 500 на этаж</td></tr></tbody>`;
+  $('n_ground').textContent='Схема по листингу: паркинг в подиуме, ритейла нет, все 45 000 кв. футов GFA уходят в квартиры.';}
+  const plMax=Math.floor((FIX.gfa-FIX.lobby-FIX.cores-r.retail)/5/10)*10;
+  const cA=run({scheme:'g5',build:buildBy.g5}),cB=run({scheme:'g5',build:buildBy.g5,plate:plMax}),cC=run({scheme:'g2p6',build:buildBy.g2p6});
+  const cr=(l,f)=>`<tr><td>${l}</td><td>${f(cA)}</td><td>${f(cB)}</td><td>${f(cC)}</td></tr>`;
+  $('t_cmp').innerHTML=`<thead><tr><th>Показатель</th><th>G+5<br>этаж ${A(I.plate)}</th><th>G+5<br>весь GFA</th><th>G+2P+6<br>листинг</th></tr></thead><tbody>
+  ${cr('GFA жилого этажа',x=>A(x.resGFA/(x.g5?5:6)))}${cr('Площадь квартир',x=>A(x.sellRes))}${cr('Выручка',x=>M(x.gdv,1))}${cr('Стройка с резервом',x=>M(x.hcc,1))}${cr('Все затраты',x=>M(x.totCost,1))}
+  <tr class="total"><td>Чистая прибыль</td><td>${M(cA.profit,2)}</td><td>${M(cB.profit,2)}</td><td>${M(cC.profit,2)}</td></tr>
+  ${cr('Маржа от выручки',x=>P(x.margin))}${cr('IRR на капитал',x=>P(x.irr))}${cr('Пиковый капитал',x=>M(x.peak,1))}${cr('Мультипликатор',x=>X(x.mult))}${cr('Сдача',x=>cal(x.H))}${cr('Квартир',x=>units(x,x.g5?'g5':'g2p6'))}</tbody>`;
+  $('n_cmp').textContent='Отказ от подиума экономит '+M(cC.hcc-cA.hcc,1)+' AED на стройке и '+(cC.H-cA.H)+' мес., но забирает '+A(cC.sellRes-cA.sellRes)+' кв. футов продаваемой площади. Средний столбец: этаж '+A(plMax)+' кв. футов, чтобы выбрать весь разрешённый GFA: машиномест только под квартиры нужно '+units(cB,'g5')+', на земле столько не поместится. Срок стройки: '+buildBy.g5+' мес. для G+5 и '+buildBy.g2p6+' мес. для G+2P+6.';
+  // retail sale model
+  {const rc=r.hcRetail*(1+I.cont),cm=r.gdvRet*I.com,mk=r.gdvRet*I.mkt,net=r.gdvRet-rc-cm-mk,rb=Math.ceil(r.retail/FIX.retailPerBay);
+  $('t_retail').innerHTML=r.retail>0?`<thead><tr><th>Ритейл: модель продажи</th><th>Значение</th><th class="l">Комментарий</th></tr></thead><tbody>
+  <tr><td>Площадь на продажу</td><td>${A(r.retail)} кв. ф.</td><td class="l">остаток первого этажа, shell &amp; core, выход на улицу</td></tr>
+  <tr><td>Цена продажи</td><td>${A(I.rprice)}${SQ}</td><td class="l">вводная; НДС 5% платит покупатель сверх цены</td></tr>
+  <tr><td>Выручка</td><td>${A(r.gdvRet)}</td><td class="l">${P(r.gdvRet/r.gdv)} всей выручки проекта</td></tr>
+  <tr><td>Стройка shell &amp; core с резервом</td><td>${A(-rc)}</td><td class="l">${A(I.rate*FIX.retailCostK)}${SQ}: 65% ставки жилых этажей, без отделки</td></tr>
+  <tr><td>Комиссия и маркетинг</td><td>${A(-(cm+mk))}</td><td class="l">${P(I.com)} брокеру и ${P(I.mkt,2)} маркетинг, как по квартирам</td></tr>
+  <tr class="total"><td>Вклад ритейла в прибыль</td><td>${A(net)}</td><td class="l">${P(net/Math.max(r.profit,1))} прибыли проекта; земля на ритейл не разнесена</td></tr>
+  <tr><td>Машиномест под ритейл</td><td>${rb}</td><td class="l">из ${I.bays}; одно место на 750 кв. футов, подтвердить норму</td></tr>
+  <tr><td>Аренда, при которой покупателю интересна цена</td><td>${A(I.rprice*0.075)}${SQ} в год</td><td class="l">при доходности 7,5%; проверить по ставкам аренды в The Grand и соседних домах</td></tr>
+  <tr><td>Продажи и платежи</td><td>как у квартир</td><td class="l">тот же темп и график; на практике ритейл чаще продают ближе к сдаче</td></tr></tbody>`:`<tbody><tr><td>Ритейла нет: ${g5?'первый этаж занят паркингом и службами':'в схеме G+2P+6 по листингу коммерции нет'}</td></tr></tbody>`;}
+  // timeline
+  $('tl_total').textContent=r.T;gantt(r);steps(r);
+  // areas
+  $('t_area').innerHTML=`<thead><tr><th>Показатель</th><th>Кв. футов</th><th class="l">Основание</th></tr></thead><tbody>
+  <tr><td>Участок</td><td>${A(FIX.plot)}</td><td class="l">листинг</td></tr>
+  <tr><td>Разрешённый GFA</td><td>${A(FIX.gfa)}</td><td class="l">листинг, проверить</td></tr>
+  <tr><td>Жилой GFA</td><td>${A(r.resGFA)}</td><td class="l">${g5?'5 этажей по '+A(I.plate):'6 этажей по 7 500'}</td></tr>
+  ${g5?`<tr><td>GFA первого этажа: лобби, узлы, ритейл</td><td>${A(r.gfaUsed-r.resGFA)}</td><td class="l">технические помещения вне GFA</td></tr><tr><td>Неиспользованный GFA</td><td>${A(FIX.gfa-r.gfaUsed)}</td><td class="l">${P(1-r.gfaUsed/FIX.gfa)} разрешённого</td></tr>`:''}
+  <tr><td>Балконы и террасы</td><td>${A(r.resGFA*FIX.balc)}</td><td class="l">10% жилого GFA</td></tr>
+  <tr><td>${g5?'Первый этаж под домом':'Подиум: паркинг и службы'}</td><td>${A(g5?r.groundBUA:r.parkBUA)}</td><td class="l">${g5?'из них закрытых помещений '+A(r.groundEncl):'65% от GFA'}</td></tr>
+  <tr class="total"><td>Общая площадь здания (BUA)</td><td>${A(r.bua)}</td><td class="l">база для сметы</td></tr>
+  <tr class="total"><td>Продаваемая площадь</td><td>${A(r.sellable)}</td><td class="l">квартиры ${A(r.sellRes)}${r.retail>0?' + ритейл '+A(r.retail):''}</td></tr></tbody>`;
+  let mu=0,mh='';mixOf(I.scheme).forEach(x=>{const n=Math.round(r.sellRes*x[1]/x[2]);mu+=n;mh+=`<tr><td>${x[0]}</td><td>${n}</td><td>${A(x[2])}</td><td>${A(I.price*x[3])}</td><td>${M(x[2]*I.price*x[3],2)}</td></tr>`});
+  if(r.retail>0)mh+=`<tr><td>Ритейл</td><td>1</td><td>${A(r.retail)}</td><td>${A(I.rprice)}</td><td>${M(r.gdvRet,2)}</td></tr>`;
+  $('t_mix').innerHTML=`<thead><tr><th>Тип</th><th>Шт.</th><th>Кв. футов</th><th>За кв. фут</th><th>Чек</th></tr></thead><tbody>${mh}<tr class="total"><td>Квартир всего</td><td>${mu}</td><td>${A(r.sellRes/mu)}</td><td>${A(I.price)}</td><td>${M(r.gdvRes/mu,2)}</td></tr></tbody>`;
+  {const un=units(r,I.scheme),cap=g5?I.bays-Math.ceil(r.retail/FIX.retailPerBay):Math.round(r.parkBUA/350);var mixWarn=I.mix==='compact'?'Компактная нарезка: студии по 400 и квартиры с одной спальней по 480 кв. футов; ставка стройки жилых этажей увеличена на 8% из-за числа кухонь и санузлов (наша оценка). '+(un>cap?'Паркинг не сходится: '+un+' квартир при '+cap+' местах под квартиры; норму нужно либо снижать через согласование, либо добирать подземным или механизированным паркингом, которого в смете нет. ':''):(I.price>2100?'Цена '+A(I.price)+' AED за кв. фут на '+P(I.price/1890-1,0)+' выше средней по району для квартир с одной и двумя спальнями (1 890) и соответствует уровню La Vue (2 204): для стандартной нарезки это верх рынка. Сделки Bayut подтверждают такой уровень прежде всего для компактных квартир до 500 кв. футов. ':'');}
+  $('n_mix').textContent=mixWarn+(g5&&I.mix!=='compact'?'Нарезка подобрана под 40 машиномест: квартиры с одной и двумя спальнями, по одному месту на квартиру. ':'')+'Площади и соотношение цен взяты из регистраций DLD 2026 года по району: квартиры с одной спальней идут немного выше средней цены, с двумя немного ниже. Модель считает выручку по средней цене; таблица нужна для проверки чеков.';
+  // uses
+  const row=(l,v,cls)=>`<tr${cls?' class="'+cls+'"':''}><td>${l}</td><td>${A(v)}</td><td>${A(v/r.sellable)}</td><td>${P(v/r.gdv)}</td></tr>`;
+  const other=r.plotSCt+r.unsoldSCt+r.dlp;
+  $('t_uses').innerHTML=`<thead><tr><th>Расходы</th><th>AED</th><th>На кв. фут</th><th>% выручки</th></tr></thead><tbody>
+  ${row('Цена участка',I.land)}${row('DLD 4%, агент 2% с НДС',r.acq-I.land)}
+  ${row('Жилые этажи с балконами',r.hcRes)}${g5?row('Первый этаж: лобби, ритейл, технические помещения',r.hcGround):''}${row(g5?'Паркинг на земле и благоустройство':'Подиум: паркинг и службы',r.hcPark)}${row('Бассейн, лобби, шоурум, озеленение',FIX.amen)}${row('Резерв '+P(I.cont),r.cont)}
+  ${row('Проектирование и технадзор (6%)',r.consF)}${row('Сборы властей, подключения, Meraas',r.authF+FIX.noc)}${row('RERA, эскроу, юристы',FIX.rera)}${row('Управление проектом (4%)',r.dmF)}
+  ${row('Комиссия брокерам '+P(I.com),r.com)}${row('Маркетинг и офис продаж '+P(I.mkt,2),r.mk)}${I.abs>0?row('Сбор DLD за покупателей '+P(I.abs),r.absC):''}
+  ${row('Сервисные сборы и гарантийный резерв',other)}${I.debt?row('Проценты и комиссия по кредиту',r.interest+r.arrFee):''}
+  ${row('Все затраты проекта',tc,'total')}${row('Выручка (GDV)',r.gdv)}${row('Чистая прибыль до налога',r.profit,'total')}</tbody>
+  <thead><tr><th>Источники на пике</th><th>AED</th><th></th><th>% затрат</th></tr></thead><tbody>
+  <tr><td>Капитал, максимум вложенного</td><td>${A(r.peak)}</td><td></td><td>${P(r.peak/tc)}</td></tr>
+  <tr><td>Кредит под землю</td><td>${I.debt?A(r.loan):'-'}</td><td></td><td>${I.debt?P(r.loan/tc):'-'}</td></tr>
+  <tr><td>Платежи покупателей через эскроу</td><td>${A(tc-r.peak-r.loan)}</td><td></td><td>${P((tc-r.peak-r.loan)/tc)}</td></tr></tbody>`;
+  const pref=Math.max(0,r.t1-r.totEq);
+  $('t_ret').innerHTML=`<thead><tr><th>Доходность</th><th>Проект</th><th>LP</th></tr></thead><tbody>
+  <tr><td>Чистая прибыль до налога</td><td>${A(r.profit)}</td><td>${A(r.lpProfit)}</td></tr>
+  <tr><td>IRR на капитал, помесячные потоки</td><td>${P(r.irr)}</td><td>${P(r.lpIrr)}</td></tr>
+  <tr><td>Мультипликатор капитала</td><td>${X(r.mult)}</td><td>${X(r.lpMult)}</td></tr>
+  <tr><td>Маржа от выручки / прибыль на затраты</td><td>${P(r.margin)} / ${P(r.poc)}</td><td></td></tr>
+  <tr><td>Без кредита: IRR и прибыль</td><td>${P(ru.irr)} · ${A(ru.profit)}</td><td></td></tr>
+  <tr><td>Корпоративный налог 9%, справочно</td><td>${A(-rt.tax)}</td><td></td></tr>
+  <tr><td>Прибыль и IRR после налога</td><td>${A(rt.profit)} · ${P(rt.irr)}</td><td></td></tr>
+  <tr><td>Всего внесено капитала</td><td>${A(r.totEq)}</td><td></td></tr>
+  <tr><td>Возврат капитала</td><td>${A(Math.min(r.t1,r.totEq))}</td><td>${A(Math.min(r.t1,r.totEq))}</td></tr>
+  <tr><td>Уровень 1: 8% годовых, 100% LP</td><td>${A(pref)}</td><td>${A(pref)}</td></tr>
+  <tr><td>Уровень 2: полоса от 8 до 10%, 100% GP</td><td>${A(r.t2)}</td><td>-</td></tr>
+  <tr><td>Уровень 3: от 10 до 25%, 80 / 20</td><td>${A(r.t3)}</td><td>${A(r.t3*0.8)}</td></tr>
+  <tr><td>Уровень 4: выше 25%, 70 / 30</td><td>${A(r.t4)}</td><td>${A(r.t4*0.7)}</td></tr>
+  <tr class="total"><td>Доля GP в прибыли (${r.profit>0?P(r.promote/r.profit):'0%'})</td><td>${A(r.promote)}</td><td></td></tr>
+  <tr><td>GP всего, с вознаграждением за управление</td><td>${A(r.promote+r.dmF)}</td><td></td></tr></tbody>`;
+  escrowTable(r);
+  charts(r);cfTable(r);
+  const irrF=v=>v<=-0.99?'н/д':P(v);
+  const builds=around(I.build,[-4,-2,0,2,4,6,8],10,40),sal=around(I.sales,[-12,-6,0,6,12,18],3,48);
+  hm($('s1'),'Стройка \\ Продажи',builds,sal,(b,s)=>run({build:b,sales:s}).irr,irrF,v=>v+' мес.',v=>v,builds.indexOf(I.build),sal.indexOf(I.sales),0.08);
+  const pre=around(I.design,[-3,-2,0,2,4,6],2,18),lau=around(I.launch,[-6,-3,0,3,6,9],0,15);
+  hm($('s2'),'Подготовка \\ Старт',pre,lau,(d,l)=>run({design:d,launch:l}).irr,irrF,v=>(v+I.tender)+' мес.',v=>'+'+v,pre.indexOf(I.design),lau.indexOf(I.launch),0.08);
+  const rates=around(I.rate,[-100,-50,0,50,100,150,200],300,1100),prs=around(I.price,[-300,-200,-100,0,100,200,300],1200,3200);
+  hm($('s3'),'Ставка \\ Цена',rates,prs,(c,p)=>run({rate:c,price:p}).irr,irrF,v=>A(v),v=>A(v),rates.indexOf(I.rate),prs.indexOf(I.price),0.08);
+  const lands=around(I.land,[-7.5e6,-5e6,-2.5e6,0,2.5e6,5e6],10e6,35e6);
+  hm($('s4'),'Земля \\ Цена',lands,prs,(l,p)=>run({land:l,price:p}).profit,Mc,v=>nf(v/1e6,1)+' млн',v=>A(v),lands.indexOf(I.land),prs.indexOf(I.price),0);
+  const hands=around(I.hand,[-0.2,-0.1,0,0.1,0.2],0.1,0.8);
+  hm($('s5'),'При сдаче \\ Продажи',hands,sal,(h,s)=>run({hand:h,sales:s}).peak,Mc,v=>P(v,0),v=>v,hands.indexOf(I.hand),sal.indexOf(I.sales),-1e18,true);
+  const sells=around(I.sell,[-0.10,-0.05,0,0.05,0.10],0.8,1.2);
+  hm($('s6'),'Площадь \\ Цена',sells,prs,(s,p)=>run({sell:s,price:p}).margin,v=>P(v),v=>P(v,0),v=>A(v),sells.indexOf(I.sell),prs.indexOf(I.price),0.10);
+  const sp=t=>solve(I,'price',500,6000,t,x=>x.irr),sl=(t,f)=>solve(I,'land',1e6,6e7,t,f),rateBE=solve(I,'rate',100,3000,0,x=>x.profit);
+  const hr=(l,v,u)=>`<tr><td>${l}</td><td>${v===null?'н/д':u==='M'?M(v,2):A(v)}</td><td>${v===null?'':u==='M'?A(v/FIX.gfa)+' за кв. фут GFA':(v>=1890?'+':'')+P(v/1890-1)+' к средней DLD'}</td></tr>`;
+  $('t_hurdle').innerHTML=`<thead><tr><th>Что нужно для</th><th>Значение</th><th>Ориентир</th></tr></thead><tbody>
+  ${hr('Цена квартир: безубыточность',be,'p')}${hr('Цена квартир: IRR 15%',sp(0.15),'p')}${hr('Цена квартир: IRR 20%',sp(0.20),'p')}${hr('Цена квартир: IRR 25%',sp(0.25),'p')}
+  ${hr('Цена участка: маржа 20% от выручки',land20,'M')}${hr('Цена участка: IRR 20%',sl(0.20,x=>x.irr),'M')}${hr('Цена участка: IRR 25%',sl(0.25,x=>x.irr),'M')}
+  <tr class="total"><td>Ставка строительства при нулевой прибыли</td><td>${rateBE?A(rateBE):'н/д'}</td><td>${rateBE?'на '+P(rateBE/I.rate-1,0)+' выше текущей':''}</td></tr></tbody>`;
+  const dn=run({price:I.price*0.9,rate:I.rate*1.1,build:I.build+4,sales:I.sales+12}),up=run({price:I.price*1.1,sales:Math.max(3,I.sales-6)});
+  const sc=(l,f)=>`<tr><td>${l}</td><td>${f(dn)}</td><td>${f(r)}</td><td>${f(up)}</td></tr>`;
+  $('t_scen').innerHTML=`<thead><tr><th>Показатель</th><th>Негативный</th><th>Текущий</th><th>Позитивный</th></tr></thead><tbody>
+  ${sc('Цена квартир'+SQ,x=>A(x.gdvRes/x.sellRes))}${sc('Выручка',x=>M(x.gdv,1))}${sc('Чистая прибыль',x=>M(x.profit,2))}${sc('Маржа от выручки',x=>P(x.margin))}${sc('IRR на капитал',x=>irrF(x.irr))}${sc('Пиковый капитал',x=>M(x.peak,1))}${sc('Мультипликатор',x=>X(x.mult))}${sc('Сдача',x=>cal(x.H))}</tbody>`;
+}
+
+function escrowTable(r){const H=r.H,sumTo=(arr,a,b)=>{let s=0;for(let m=a;m<=Math.min(b,arr.length-1);m++)s+=arr[m];return s};
+  const hardTo=sumTo(r.cHard,r.L,H),othTo=sumTo(r.cost,r.L,H)-hardTo-(r.L===0?r.cLand[0]:0),eqAfter=sumTo(r.eq,r.L+1,H)+(r.eq[r.L]-r.deposit);
+  const lock5=FIX.escrowRet*r.recAtH,a0=run({depLock:0}),a1=run({depLock:1});
+  $('t_escrow').innerHTML=`<thead><tr><th>Движение по эскроу-счёту</th><th>AED</th><th class="l">Когда</th></tr></thead><tbody>
+  <tr><td>Депозит девелопера: ${P(I.dep,0)} стоимости стройки с резервом (${M(r.hcc,1)})${r.deposit>0?'':', не требуется'}</td><td>${A(r.deposit)}</td><td class="l">${cal(r.L)}, старт продаж</td></tr>
+  <tr><td>Поступления покупателей до сдачи включительно</td><td>${A(r.recAtH)}</td><td class="l">${cal(r.L)} … ${cal(H)}</td></tr>
+  <tr><td>Довнесено капиталом после депозита</td><td>${A(Math.max(0,eqAfter))}</td><td class="l">когда эскроу не хватает</td></tr>
+  <tr><td>Выплачено подрядчику под подтверждённые объёмы</td><td>${A(-hardTo)}</td><td class="l">${cal(r.L)} … ${cal(H)}</td></tr>
+  <tr><td>Прочие затраты проекта с даты старта продаж</td><td>${A(-othTo)}</td><td class="l">комиссии, маркетинг, проект, сборы</td></tr>
+  <tr><td>Заморожено после сдачи: 5% поступлений</td><td>${A(lock5)}</td><td class="l">до ${cal(H+12)}</td></tr>
+  <tr class="total"><td>Первая выплата на капитал</td><td>${A(r.dist[H])}</td><td class="l">${cal(H)}, месяц ${H}</td></tr>
+  <tr><td>Выплаты после сдачи, включая разморозку 5%</td><td>${A(r.totDist-r.dist[H])}</td><td class="l">до ${cal(r.T)}</td></tr></tbody>
+  <thead><tr><th>Что меняет режим депозита</th><th>Идёт в стройку</th><th class="l">Заморожен до сдачи</th></tr></thead><tbody>
+  <tr><td>Пиковый капитал</td><td>${M(a0.peak,2)}</td><td class="l">${M(a1.peak,2)}</td></tr>
+  <tr><td>IRR на капитал</td><td>${P(a0.irr)}</td><td class="l">${P(a1.irr)}</td></tr>
+  <tr><td>Мультипликатор</td><td>${X(a0.mult)}</td><td class="l">${X(a1.mult)}</td></tr></tbody>`}
+function gantt(r){const W=1000,L=265,R=20,T=34,rh=34,n=r.T;const x=m=>L+(W-L-R)*m/n;
+  const rowsG=[['Сделка по земле, статус девелопера',0,Math.max(1,I.design>=3?2:1),'a'],['Проект, согласования, разрешение',0,I.design,'a'],['Тендер, договор, мобилизация',I.design,r.CS,'a'],
+    ['Строительство',r.CS,r.CE,'b'],['Продажи',r.L,r.lastSale+1,'c'],['Акт готовности, сдача',r.CE,r.H,'a'],
+    ['Платежи после сдачи',I.ph>0?r.H:null,Math.max(r.lastSale,r.H)+24,'c'],['Гарантийный год, 5% на эскроу',r.H,r.H+12,'a']];
+  let s='';const step=n>48?6:3;for(let m=0;m<=n;m+=step){s+=`<line x1="${x(m)}" x2="${x(m)}" y1="${T-6}" y2="${T+rh*rowsG.length}" stroke="var(--line)"/><text x="${x(m)}" y="${T-12}" text-anchor="middle" font-size="10.5" fill="var(--muted)">${cal(m)}</text><text x="${x(m)}" y="${T+rh*rowsG.length+16}" text-anchor="middle" font-size="10.5" fill="var(--muted)">М${m}</text>`}
+  rowsG.forEach((g,i)=>{const y=T+i*rh;s+=`<text x="0" y="${y+21}" font-size="12.5" fill="var(--ink)">${g[0]}</text>`;
+    if(g[1]===null){s+=`<text x="${L+6}" y="${y+21}" font-size="11.5" fill="var(--muted)">в текущем графике платежей нет</text>`;return}
+    const col=g[3]==='b'?'var(--cn)':g[3]==='c'?'var(--teal)':'var(--hm2)';
+    s+=`<rect x="${x(g[1])}" y="${y+7}" width="${Math.max(3,x(g[2])-x(g[1]))}" height="20" rx="2" fill="${col}"/><text x="${x(g[2])+6}" y="${y+21}" font-size="11" fill="var(--muted)">${g[2]-g[1]} мес.</text>`});
+  const yb=T+rh*rowsG.length;[r.L,r.H].forEach(k=>{s+=`<line x1="${x(k)}" x2="${x(k)}" y1="${T}" y2="${yb}" stroke="var(--teal)" stroke-dasharray="4 3"/>`});
+  $('gantt').setAttribute('viewBox',`0 0 ${W} ${yb+24}`);$('gantt').innerHTML=s}
+function steps(r){const st=[
+  ['Проверка участка, договор, переоформление в DLD','М0',cal(0),'Affection plan, title deed, NOC Meraas; земля оплачена полностью'],
+  ['Лицензия и регистрация девелопера в RERA','М0 … М'+Math.min(3,I.design),cal(Math.min(3,I.design)),'Без этого проект не зарегистрировать'],
+  ['Концепция, рабочий проект, согласование Meraas, разрешение на стройку','М0 … М'+I.design,cal(I.design),'Разрешение выдано; GFA и квартирография зафиксированы'],
+  ['Тендер, выбор подрядчика, мобилизация','М'+I.design+' … М'+r.CS,cal(r.CS),'Договор с твёрдой ценой; аванс 10% под гарантию'],
+  ['Регистрация проекта в RERA, эскроу-счёт, Oqood','к М'+r.L,cal(r.L),(r.deposit>0?'Депозит девелопера на эскроу, '+P(I.dep,0)+' стоимости стройки: '+M(r.deposit,1)+' AED':'Старт после готовности '+P(I.dep,0)+', депозит не нужен')],
+  ['Продажи от старта до полной реализации','М'+r.L+' … М'+r.lastSale,cal(r.lastSale),'К сдаче продано '+P(r.soldAtH/r.gdv,0)+' и собрано '+P(r.recAtH/r.gdv,0)+' выручки'],
+  ['Строительство, выплаты с эскроу под подтверждённые объёмы','М'+r.CS+' … М'+r.CE,cal(r.CE),'Работы завершены'],
+  ['Акт готовности, title deeds на квартиры, сдача','М'+r.CE+' … М'+r.H,cal(r.H),'Первая выплата излишка с эскроу на капитал'],
+  ['Гарантийный год, разморозка 5% на эскроу и удержания подрядчика','М'+r.H+' … М'+(r.H+12),cal(r.H+12),'Финальные выплаты'+(I.ph>0?'; платежи после сдачи идут до '+cal(Math.max(r.lastSale,r.H)+24):'')]];
+  $('t_steps').innerHTML='<thead><tr><th>Этап</th><th class="l">Месяцы</th><th class="l">Срок</th><th class="l">Контрольная точка</th></tr></thead><tbody>'+st.map(a=>`<tr><td>${a[0]}</td><td class="l" style="white-space:nowrap">${a[1]}</td><td class="l" style="white-space:nowrap">${a[2]}</td><td class="l">${a[3]}</td></tr>`).join('')+'</tbody>'}
+function axis(W,H,L,R,T,B,mn,mx,n){const y=v=>T+(mx-v)/(mx-mn)*(H-T-B),bw=(W-L-R)/n;let s='';
+  for(let i=0;i<=5;i++){const v=mn+(mx-mn)*i/5;s+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${Math.round(v/1e6)}</text>`}
+  s+=`<text x="${L-8}" y="${T-14}" text-anchor="end" font-size="10" fill="var(--muted)">млн</text>`;
+  const step=n>48?6:3;for(let m=0;m<n;m+=step)s+=`<text x="${L+m*bw+bw/2}" y="${H-B+16}" text-anchor="middle" font-size="10.5" fill="var(--muted)">${cal(m)}</text>`;
+  return {y,bw,s}}
+function charts(r){const n=r.T+1;
+  {const W=1000,H=300,L=56,R=16,T=30,B=30;const flows=r.cf;const mn=Math.min(0,...flows),mx=Math.max(...flows,...r.cashA);const a=axis(W,H,L,R,T,B,mn,mx,n);let s=a.s;
+   flows.forEach((v,i)=>{if(Math.abs(v)<1)return;s+=`<rect x="${L+i*a.bw+a.bw*0.15}" width="${a.bw*0.7}" y="${Math.min(a.y(0),a.y(v))}" height="${Math.abs(a.y(v)-a.y(0))}" fill="${v<0?'var(--cn)':'var(--teal)'}"/>`});
+   s+=`<polyline fill="none" stroke="var(--muted)" stroke-width="2" points="${r.cashA.map((v,i)=>`${L+i*a.bw+a.bw/2},${a.y(v)}`).join(' ')}"/><line x1="${L}" x2="${W-R}" y1="${a.y(0)}" y2="${a.y(0)}" stroke="var(--muted)"/>`;
+   $('chart1').innerHTML=s}
+  {const W=1000,H=280,L=56,R=16,T=30,B=30;let c1=0,c2=0,c3=0;const rec=[],cst=[],sld=[];for(let m=0;m<n;m++){c1+=r.rec[m];c2+=r.cost[m]-r.cLand[m];c3+=r.sold[m];rec.push(c1);cst.push(c2);sld.push(c3)}
+   const a=axis(W,H,L,R,T,B,0,Math.max(c1,c2,c3),n);let s=a.s;const pl=(arr,col,d)=>`<polyline fill="none" stroke="${col}" stroke-width="2.5" ${d?'stroke-dasharray="5 4"':''} points="${arr.map((v,i)=>`${L+i*a.bw+a.bw/2},${a.y(v)}`).join(' ')}"/>`;
+   s+=pl(sld,'var(--muted)',1)+pl(cst,'var(--cn)')+pl(rec,'var(--teal)');
+   const xh=L+r.H*a.bw+a.bw/2;s+=`<line x1="${xh}" x2="${xh}" y1="${T}" y2="${H-B}" stroke="var(--teal)" stroke-dasharray="4 3"/><text x="${xh-6}" y="${T+12}" text-anchor="end" font-size="11" fill="var(--muted)">сдача</text>`;
+   $('chart2').innerHTML=s}}
+function cfTable(r){const q=[];for(let m=0;m<=r.T;m++){const i=m===0?0:Math.floor((m-1)/3)+1;q[i]=q[i]||{a:m,b:m,rec:0,land:0,hard:0,soft:0,sales:0,oth:0,eq:0,dist:0,cash:0,debt:0};const o=q[i];o.b=m;o.rec+=r.rec[m];o.land+=r.cLand[m];o.hard+=r.cHard[m];o.soft+=r.cSoft[m];o.sales+=r.cSales[m];o.oth+=r.cOther[m];o.eq+=r.eq[m];o.dist+=r.dist[m];o.cash=r.cashA[m];o.debt=r.debtBal[m]}
+  const line=(l,f,cls)=>`<tr${cls?' class="'+cls+'"':''}><td>${l}</td>${q.map(o=>`<td>${K(f(o))}</td>`).join('')}<td>${K(q.reduce((s,o)=>s+f(o),0))}</td></tr>`;
+  const bal=(l,f)=>`<tr><td>${l}</td>${q.map(o=>`<td>${K(f(o))}</td>`).join('')}<td></td></tr>`;
+  $('t_cf').innerHTML=`<thead><tr><th>Квартал до</th>${q.map(o=>`<th>${o.a===0&&o.b===0?'М0':cal(o.b)}</th>`).join('')}<th>Итого</th></tr></thead><tbody>
+  ${line('Поступления от покупателей',o=>o.rec)}${line('Земля и расходы на сделку',o=>-o.land)}${line('Строительство с резервом',o=>-o.hard)}${line('Проект, сборы, управление',o=>-o.soft)}${line('Комиссии, маркетинг, акции',o=>-o.sales)}${line('Сервисные сборы, гарантийный резерв',o=>-o.oth)}
+  ${line('Взносы капитала',o=>o.eq,'sub')}${line('Выплаты на капитал',o=>-o.dist,'sub')}${bal('Деньги проекта на эскроу, конец',o=>o.cash)}${I.debt?bal('Кредит с процентами, конец',o=>-o.debt):''}</tbody>`}
+buildControls();render();
+
+</script>
+</body>
+</html>
